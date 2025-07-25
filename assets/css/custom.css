@@ -1,0 +1,379 @@
+@import "responsive.css"; /* Using a string */
+/* Veriable */
+:root {
+    --primaryFonts:  'Helvetica Neue', sans-serif;
+    --primaryColor: #4167B2;   
+    --gredientBg: linear-gradient(180deg, #D425FC 0%, #9733EE 100%);
+    --textColor:#272727;
+    --iconColor: #939393;
+    --whiteColor: #fff;
+    --blackColor: #000;
+    --titleColor: #282828;
+    --greyColor: #656565;
+    --transition01: .4s all;
+}
+
+
+/* Common Css */
+body {
+    background-color: rgba(235, 235, 235, 0.8);
+}
+
+body, ul, ol, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primaryFonts);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-weight: 500;
+    color: var(--whiteColor);
+    font-size: 16px;
+}
+
+a, a:focus, a:hover {
+    text-decoration: none;
+}
+
+.primaryBtn {
+    background: var(--gredientBg);
+    line-height: 40px;
+    padding: 0px 16px;
+    color: var(--whiteColor);
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    position: relative;
+    transition: var(--transition01);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: none;
+}
+
+.primaryBtn:hover, .outlineBtn:hover {
+    transform: translateY(-4px);
+}
+
+button:focus, select:focus, input:focus {
+    outline: unset !important;
+    box-shadow: none !important;
+}
+
+.textMd {
+    font-weight: 500;
+    color: var(--greyColor);
+    font-size: 20px;;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+
+
+
+/* Dashboard */
+.dashboardWrap {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.dashboardContent {
+    width: calc(100% - 195px);
+    margin-left: 195px;
+    padding: 20px;
+    transition: var(--transition01);
+}
+
+.sideNavClose + .dashboardContent {
+    width: calc(100% - 87px);
+    margin-left: 87px;
+}
+
+
+/* Side Nav */
+.sideNav {
+    flex-basis: 180px;
+    position: fixed;
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.05);
+    background: var(--whiteColor);
+    width: 180px;
+    padding:5px 0px 15px 15px;
+    z-index: 9;
+    top: 20px;
+    left: 15px;
+    border-radius: 12px;
+    transition: var(--transition01);
+}
+
+.sideNavMenu {
+    height: calc(100vh - 95px);
+    overflow-y: auto;
+}
+
+.sideNav li a {
+    padding: 14px 0px 14px 10px;
+    margin-bottom: 10px;
+}
+
+.sideNav li a {
+    display: flex;
+    align-items: center;
+    color: var(--textColor);
+    font-size: 14px;
+    font-weight: 300;
+    transition: var(--transition01);
+    border: 1px solid transparent;
+}
+
+.sideNav li a .menuIcon {
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.sideNav .menuIcon .activeIcon {
+    display: none;
+}
+
+.sideNav a.active .menuIcon .activeIcon {
+    display: inline-block;
+}
+
+.sideNav a.active .menuIcon .defaultIcon {
+    display: none;
+}
+
+.sideNav li a.active {
+    background: linear-gradient(180deg, #D425FC 0%, #9733EE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 500;
+    border: 1px solid rgba(39, 39, 39, 0.02);
+}
+
+.sideNav li a:hover {
+    background: linear-gradient(180deg, #D425FC 0%, #9733EE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.sideNav .navLogo {
+    display: none;
+}
+
+.sideNav.sideNavClose {
+    padding: 0;
+    width: 72px;
+}
+
+.sideNav.sideNavClose a span:first-child {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+}
+
+.sideNav.sideNavClose a span:last-child {
+    opacity: 0;
+    width: 0;
+}
+
+.sideNav.sideNavClose .closeBtn {
+    transform: rotate(180deg);
+    text-align: left !important;
+    position: absolute;
+    top: 8px;
+    right: -10px;
+}
+
+.sideNav.sideNavClose .navLogo {
+    display: block;
+}
+
+.sideNav.sideNavClose li a {
+    padding: 10px 0px 10px 10px;
+    margin-bottom: 0;
+    height: 50px;
+}
+
+/* Dashboard Data */
+.dashboardData {
+    padding: 24px;
+}
+
+.whiteCard {
+    padding: 20px;
+    border-radius: 20px;
+    border:2px solid #EFEEEB;
+    background-color: var(--whiteColor);
+    margin-bottom: 24px;
+}
+
+.topNav span {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.searchBar input {
+    background: var(--whiteColor);
+    border: none;
+    padding: 10px 16px 10px 42px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
+}
+
+span.searchIcon {
+    position: absolute;
+    top: 7px;
+    left: 16px;
+}
+
+.filterDiv {
+    background: var(--whiteColor);
+    border: none;
+    padding: 0 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
+    line-height: 40px;
+    color: var(--iconColor);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.dashboardImgCard {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dashboardImgCard > img {
+    aspect-ratio: 3/2.9;
+    object-fit: cover;
+}
+
+.imgContent {
+    position: absolute;
+    padding: 15px;
+    bottom: 0;
+    width: 100%;
+}
+
+.imgContent::after {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.imgContent * {
+    position: relative;
+    z-index: 1;
+}
+
+.imgContent h4 {
+    color: var(--whiteColor);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.imgContent p {
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+.imgCardBtn span {
+    border: 1px solid var(--whiteColor);
+    padding: 5px 10px;
+    font-size: 12px;
+    color: var(--whiteColor);
+    font-weight: 400;
+    border-radius: 32px;
+    margin-right: 2px;
+}
+
+.imgCardIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+}
+
+.imgCardIcon span {
+    display: inline-flex;
+    background: var(--whiteColor);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+}
+
+
+.slideCard h5 {
+    font-size: 18px;
+    color: var(--titleColor);
+    margin-bottom: 16px;
+}
+
+.slideCard img {
+    border-radius: 12px;
+}
+
+.slideCard p {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--iconColor);
+    padding: 10px 0;
+}
+
+.slideCard .slick-arrow {
+    border: none;
+    background: transparent;
+}
+
+.slideCard .slick-arrow:disabled {
+  cursor: not-allowed;
+}
+
+.slideCard .slick-arrow:disabled svg path {
+  fill: var(--iconColor);
+}
+
+span.counter {
+    font-size: 12px;
+    color: var(--iconColor);
+    font-weight: 500;
+    margin: 0 10px;
+}
