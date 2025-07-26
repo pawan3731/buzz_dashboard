@@ -10,6 +10,7 @@
     --blackColor: #000;
     --titleColor: #282828;
     --greyColor: #656565;
+    --greyBg: rgba(235, 235, 235, 0.6);
     --transition01: .4s all;
 }
 
@@ -33,34 +34,53 @@ img {
     max-width: 100%;
 }
 
-p {
-    font-weight: 500;
-    color: var(--whiteColor);
-    font-size: 16px;
-}
-
 a, a:focus, a:hover {
     text-decoration: none;
 }
 
-.primaryBtn {
-    background: var(--gredientBg);
+.btn {
     line-height: 40px;
     padding: 0px 16px;
-    color: var(--whiteColor);
     font-size: 15px;
     font-weight: 500;
     border-radius: 10px;
     position: relative;
-    transition: var(--transition01);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
     border: none;
+    transition: var(--transition01);
 }
 
-.primaryBtn:hover, .outlineBtn:hover {
+.primaryBtn {
+    background: var(--gredientBg);
+    color: var(--whiteColor) !important;
+}
+
+.gradientOutlineBtn {
+    position: relative;
+}
+
+.gradientOutlineBtn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: linear-gradient(180deg, #D425FC, #9733EE);
+    border-radius: 12px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 0;
+}
+
+.outlineBtn {
+    border: 1px solid rgba(166, 166, 166, 0.3)
+}
+
+.btn:hover {
     transform: translateY(-4px);
 }
 
@@ -79,8 +99,62 @@ button:focus, select:focus, input:focus {
     cursor: pointer;
 }
 
+.greyBg {
+    background-color: var(--greyBg);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+select.form-select, .form-control {
+    box-shadow: 0px 0px 6px 0px rgba(178, 178, 178, 0.37);
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--textColor);
+    height: 45px;
+}
+
+textarea.form-control {
+    height: 142px;
+}
+
+.form-label {
+    margin-bottom: .7rem;
+    color: var(--titleColor);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.formNote {
+    font-size: 12px;
+    font-weight: 300;
+    opacity: 0.5;
+    color: var(--textColor);
+}
+
+.formIcon {
+    position: absolute;
+    bottom: 11px;
+    right: 16px;
+}
 
 
+.pageTitle {
+    color: var(--titleColor);
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.pageSubTitle {
+    color: #A6A6A6;
+    font-weight: 500;
+    font-size: 18px;
+}
 
 /* Dashboard */
 .dashboardWrap {
@@ -203,7 +277,7 @@ button:focus, select:focus, input:focus {
 }
 
 .sideNav.sideNavClose li a {
-    padding: 10px 0px 10px 10px;
+    padding: 10px 0px 10px 0;
     margin-bottom: 0;
     height: 50px;
 }
@@ -214,9 +288,8 @@ button:focus, select:focus, input:focus {
 }
 
 .whiteCard {
-    padding: 20px;
+    padding: 24px;
     border-radius: 20px;
-    border:2px solid #EFEEEB;
     background-color: var(--whiteColor);
     margin-bottom: 24px;
 }
@@ -272,6 +345,13 @@ span.searchIcon {
     position: relative;
 }
 
+.dashboardImgCard::after {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.2);
+    content: '';
+}
+
 .dashboardImgCard > img {
     aspect-ratio: 3/2.9;
     object-fit: cover;
@@ -292,7 +372,7 @@ span.searchIcon {
     width: 100%;
     height: 100%;
     content: "";
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 .imgContent * {
@@ -310,6 +390,7 @@ span.searchIcon {
 .imgContent p {
     font-weight: 400;
     margin-bottom: 6px;
+    color: var(--whiteColor);
 }
 
 .imgCardBtn span {
@@ -319,7 +400,9 @@ span.searchIcon {
     color: var(--whiteColor);
     font-weight: 400;
     border-radius: 32px;
-    margin-right: 2px;
+    margin: 2px;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .imgCardIcon {
@@ -327,6 +410,12 @@ span.searchIcon {
     top: 0;
     right: 0;
     padding: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 4px;
+    z-index: 1;
 }
 
 .imgCardIcon span {
@@ -338,6 +427,7 @@ span.searchIcon {
     align-items: center;
     justify-content: center;
     margin: 0 2px;
+    cursor: pointer;
 }
 
 
@@ -376,4 +466,216 @@ span.counter {
     color: var(--iconColor);
     font-weight: 500;
     margin: 0 10px;
+}
+
+
+
+/* Profile Page */
+.uploadCard {
+    box-shadow: 0px 0px 6px 0px rgba(178, 178, 178, 0.37);
+    background: var(--whiteColor);
+    border-radius: 12px;
+    aspect-ratio: 4/3.2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 16px;
+}
+
+.uploadCard input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.uploadIcon p {
+    font-weight: 300;
+    font-size: 12px;
+    margin-top: 10px;
+    color: var(--textColor);
+}
+
+.cardImg {
+    border: 0.5px solid #D9D9D9;
+    border-radius: 8px;
+    padding: 5px;
+    width: 100%;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.singleCard  input[type="radio"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.singleCard input[type="radio"]:checked + .cardImg {
+    border: 0.5px solid #9733EE;
+}
+
+.socialLinksCard .form-control {
+    padding-left: 40px;
+}
+
+.socialLinksCard .formSocialIcon {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+}
+
+.profilePageBtn .btn {
+    min-width: 120px;
+}
+
+
+.liquorList {
+    display: inline-flex;
+    flex-flow: wrap;
+    gap: 6px;
+}
+
+.liquorCard {
+    padding: 8px 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.liquorCard .liquorIcon {
+    display: inline-block;
+    height: 21px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.liquorCard p {
+    color: var(--textColor);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.liquorCard .countBadge {
+    border: 0.3px solid var(--greyColor);
+    padding: 2px 7px 1px;
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 12px;
+    display: inline-block;
+    margin-left: 2px;
+    background-color: var(--whiteColor);
+    color: var(--textColor);
+    line-height: normal;
+}
+
+.liquorCard.activeCard {
+    background-image: var(--gredientBg);
+}
+
+.liquorCard.activeCard img {
+    filter: brightness(0) invert(1);
+}
+
+.liquorCard.activeCard p {
+    color: var(--whiteColor);
+} 
+
+.tableOuter table thead th {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--whiteColor);
+    padding: 11px 16px;
+    background: var(--gredientBg);
+    white-space: nowrap;
+}
+
+.tableOuter table thead th:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.tableOuter table thead th:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.tableOuter table tbody td {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(39, 39, 39, 0.8);
+    padding: 10px 16px;
+    border-bottom: 1px solid #E9E7FD;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.tableBtnWrap .tableBtn {
+    border: 0.7px solid rgba(240, 240, 240, 1);
+    background: transparent;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    transition: var(--transition01);
+}
+
+.tableBtnWrap .tableBtn  img {
+    width: 12px;
+    height: 12px;
+    max-width: inherit;
+}
+
+.tableBtnWrap .tableBtn:hover {
+    background-color: rgba(39, 39, 39, 0.1);
+}
+
+
+
+
+
+.eventCards .imgContent h4 {
+    font-size: 14px;
+}
+
+.eventCards .imgContent p {
+    font-size: 13px;
+    line-height: normal;
+}
+
+.eventCards .imgCardBtn span {
+    font-size: 9px;
+    background: #fff;
+    color: var(--textColor);
+    margin: 0 0 8px;
+}
+
+.eventCards .dashboardImgCard > img {
+    aspect-ratio: 3/3.2;
+}
+
+.uploadCard {
+    aspect-ratio: 3/3.2;
+    border: 1px dashed #a331f1;
+}
+
+.eventTabs.nav-pills .nav-link {
+    background: 0 0;
+    border: 0;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 8px 12px;
+    color: var(--textColor);
+    background-color: #F6F6F6;
+    margin-right: 5px;
+}
+
+.eventTabs.nav-pills .nav-link.active{
+    color: var(--whiteColor);
+    background: var(--gredientBg);
 }
