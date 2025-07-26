@@ -10,6 +10,7 @@
     --blackColor: #000;
     --titleColor: #282828;
     --greyColor: #656565;
+    --geryTextColor: #A6A6A6;
     --greyBg: rgba(235, 235, 235, 0.6);
     --transition01: .4s all;
 }
@@ -151,7 +152,7 @@ textarea.form-control {
 }
 
 .pageSubTitle {
-    color: #A6A6A6;
+    color: var(--geryTextColor);
     font-weight: 500;
     font-size: 18px;
 }
@@ -659,7 +660,7 @@ span.counter {
     aspect-ratio: 3/3.2;
 }
 
-.uploadCard {
+.eventCards .uploadCard {
     aspect-ratio: 3/3.2;
     border: 1px dashed #a331f1;
 }
@@ -678,4 +679,56 @@ span.counter {
 .eventTabs.nav-pills .nav-link.active{
     color: var(--whiteColor);
     background: var(--gredientBg);
+}
+
+
+
+
+
+.coinCard {
+    background: var(--whiteColor);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.coinCardIcon {
+    display: flex;
+    width: 62px;
+    height: 62px;
+    align-items: center;
+    justify-content: center;
+    background: var(--whiteColor);
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.coinCard h5 {
+    color: var(--titleColor);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.coinCard .btn {
+    line-height: 28px;
+    font-size: 12px;
+    margin: 16px 0;
+}
+
+.coinCard p {
+    font-size: 12px;
+    color: var(--geryTextColor);
+}
+
+.coinCardGrey.coinCard {
+    background-color: var(--greyBg);
+}
+
+.coinCardGrey.coinCard .btn {
+    background: rgba(192, 192, 192, 0.2);
+    color: #8F8F8F !important;
+}
+
+.slick-list {
+    padding:0 20% 0 0 !important;
 }
