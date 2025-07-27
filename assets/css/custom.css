@@ -54,6 +54,13 @@ a, a:focus, a:hover {
     transition: var(--transition01);
 }
 
+.largeBtn {
+    font-size: 18px;
+    line-height: 61px;
+    border-radius: 20px;
+    padding-inline: 24px;
+}
+
 .primaryBtn {
     background: var(--gredientBg);
     color: var(--whiteColor) !important;
@@ -94,6 +101,10 @@ button:focus, select:focus, input:focus {
     font-weight: 500;
     color: var(--greyColor);
     font-size: 20px;;
+}
+
+.titleColor {
+    color: var(--titleColor) !important;
 }
 
 .cursorPointer {
@@ -155,6 +166,10 @@ textarea.form-control {
     color: var(--geryTextColor);
     font-weight: 500;
     font-size: 18px;
+}
+
+.lightText {
+    font-weight: 300;
 }
 
 /* Dashboard */
@@ -682,9 +697,7 @@ span.counter {
 }
 
 
-
-
-
+/* Trade Coin */
 .coinCard {
     background: var(--whiteColor);
     border-radius: 20px;
@@ -729,6 +742,77 @@ span.counter {
     color: #8F8F8F !important;
 }
 
-.slick-list {
-    padding:0 20% 0 0 !important;
+.progressBar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-flow: wrap;
+    line-height: normal;
+}
+
+.progressBar .progressText {
+    background: linear-gradient(180deg, #D425FC 0%, #9733EE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.progressBlank {
+    border: 0.96px solid #02586426;
+    height: 10px;
+    border-radius: 5px;
+    min-width: 210px;
+    position: relative;
+}
+
+span.progressFill {
+    display: inline-block;
+    background: var(--gredientBg);
+    height: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+}
+
+
+.cardText h5 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--titleColor);
+}
+
+.cardText p {
+    font-size: 12px;
+    color: var(--geryTextColor);
+}
+
+.leftIconCard {
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    padding: 25px 10px;
+}
+
+.leftIconCard span {
+    height: 46px;
+    word-wrap: break-word;
+}
+
+.leftVideo {
+    flex-basis: 35%;
+}
+
+.leftVideo iframe {
+    border-radius: 10px;
+}
+
+.cardText {
+    flex-basis: calc(65% - 20px);
 }

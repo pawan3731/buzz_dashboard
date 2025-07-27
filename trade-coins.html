@@ -112,12 +112,27 @@
 
         <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-3">
           <div>
-            <h2 class="pageTitle">EARN TRADE COINS BY COMPLETING TASKS</h2>
+            <h2 class="pageTitle">TRADE COINS</h2>
+          </div>
+          <div>
+            <button class="btn" type="button">Buy Trade Coins</button>
+            <button class="btn">Use Trade Coins</button>
+            <button class="btn primaryBtn largeBtn" type="button"><span class="lightText">You have</span> <b>4355 BUUZ Trade Coins</b></button>
           </div>
         </div>
 
         <div class="greyBg">
-          <div class="slick-slider">
+          <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap mb-3">
+            <h5 class="ps-2 textMd titleColor">EARN TRADE COINS BY COMPLETING TASKS</h5>
+            <div class="progressBar">
+              <span class="progressText">60% Completed:</span> 
+              <div class="progressBlank">
+                <span class="progressFill" style="width: 60%;"></span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="coin-slider">
             <div>
               <div class="coinCard">
                 <span class="coinCardIcon"><img src="assets/images/tick-icon.svg" alt="tick-icon"></span>
@@ -190,6 +205,69 @@
                 <p>Potter ipsum wand elf parchment wingardium. Maze biting rise padfoot whomping minister managed
                   scarlet
                   cleansweep. Baubles nose or is is.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="greyBg mt-3">
+          <div class="row g-3 align-items-center">
+            <div class="col-xl-4 col-lg-6">
+              <div class="cardText">
+                <h5>Download Marketing Material</h5>
+                <p>Venues earn trade coins by completing their profile, adding events, sharing BUUZ, and driving
+                  downloads—then use them to promote events dth low ROI. <a href="#"> read more.....</a></p>
+              </div>
+            </div>
+            <div class="col-xl-8 col-lg-6">
+              <div class="row g-3">
+                <div class="col-xl-4 col-md-6">
+                  <div class="leftIconCard">
+                    <span><img src="assets/images/digital-icon.svg" alt="digital-icon"></span>
+                    <h6>Digital Assets</h6>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                  <div class="leftIconCard">
+                    <span><img src="assets/images/print-icon.svg" alt="print-icon"></span>
+                    <h6>Printable Assets</h6>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                  <div class="leftIconCard">
+                    <span><img src="assets/images/other-icon.svg" alt="other-icon"></span>
+                    <h6>Other Assets</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3 g-3">
+          <div class="col-lg-6">
+            <div class="greyBg">
+              <div class="leftVideoCard d-flex align-items-center gap-3 flex-wrap">
+                <div class="leftVideo">
+                  <iframe width="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
+                <div class="cardText">
+                  <h5>HOW DO TRADE COINS WORK?</h5>
+                  <p>Venues earn trade coins by completing their profile, adding events, sharing BUUZ, and driving downloads—then use them to promote events directly to the right audience, skipping costly ads with low ROI. <a href="#"> read more.....</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="greyBg">
+              <div class="leftVideoCard d-flex align-items-center gap-3 flex-wrap">
+                <div class="leftVideo">
+                  <iframe width="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
+                <div class="cardText">
+                  <h5>HOW DO TRADE COINS WORK?</h5>
+                  <p>Venues earn trade coins by completing their profile, adding events, sharing BUUZ, and driving downloads—then use them to promote events directly to the right audience, skipping costly ads with low ROI. <a href="#"> read more.....</a></p>
+                </div>
               </div>
             </div>
           </div>
@@ -208,16 +286,16 @@
       $(this).closest(".sideNav").toggleClass("sideNavClose");
     });
 
-  
-     $('.slick-slider').slick({
-      slidesToShow: 3.5,
+
+    $('.coin-slider').slick({
+      slidesToShow: 4.5,
       slidesToScroll: 1,
       arrows: true,
       dots: false,
-      infinite: true,
+      infinite: false,
       loop: true
     });
-   
+
 
   </script>
 
