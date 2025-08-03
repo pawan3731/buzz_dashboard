@@ -115,116 +115,276 @@
             <h2 class="pageTitle">BEVERAGES & FOOD AVAILABLE AT VENUE</h2>
           </div>
           <div class="profilePageBtn">
-            <button class="btn primaryBtn" type="button">+ Add Liquor</button>
+            <button class="btn primaryBtn" type="button" data-bs-toggle="modal" data-bs-target="#AddLiquor">+ Add
+              Liquor</button>
           </div>
         </div>
 
-        <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-3">
-          <div class="liquorList">
-            <div class="liquorCard activeCard">
+        <ul class=" nav nav-pills mb-3 liquorTab align-items-center gap-1" id="pills-tab01" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="liquor01-tab" data-bs-toggle="pill" data-bs-target="#liquor01"
+              type="button" role="tab" aria-controls="liquor01" aria-selected="true">
               <span class="liquorIcon"><img src="assets/images/liquor02.svg" alt="liquor-icon"></span>
               <p>Cocktails <span class="countBadge">72</span></p>
-            </div>
-            <div class="liquorCard">
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="liquor02-tab" data-bs-toggle="pill" data-bs-target="#liquor02" type="button"
+              role="tab" aria-controls="liquor02" aria-selected="true">
               <span class="liquorIcon"><img src="assets/images/liquor03.svg" alt="liquor-icon"></span>
               <p>Beers <span class="countBadge">72</span></p>
-            </div>
-            <div class="liquorCard">
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="liquor03-tab" data-bs-toggle="pill" data-bs-target="#liquor03" type="button"
+              role="tab" aria-controls="liquor03" aria-selected="true">
               <span class="liquorIcon"><img src="assets/images/liquor04.svg" alt="liquor-icon"></span>
               <p>Wines <span class="countBadge">72</span></p>
-            </div>
-            <div class="liquorCard">
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="liquor04-tab" data-bs-toggle="pill" data-bs-target="#liquor04" type="button"
+              role="tab" aria-controls="liquor04" aria-selected="true">
               <span class="liquorIcon"><img src="assets/images/liquor05.svg" alt="liquor-icon"></span>
               <p>Non-Alcoholics <span class="countBadge">72</span></p>
-            </div>
-            <div class="liquorCard">
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="liquor05-tab" data-bs-toggle="pill" data-bs-target="#liquor05" type="button"
+              role="tab" aria-controls="liquor05" aria-selected="true">
               <span class="liquorIcon"><img src="assets/images/liquor06.svg" alt="liquor-icon"></span>
               <p>Food <span class="countBadge">72</span></p>
-            </div>
-            <div class="liquorCard">
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="liquor06-tab" data-bs-toggle="pill" data-bs-target="#liquor06" type="button"
+              role="tab" aria-controls="liquor06" aria-selected="true">
               <span class="liquorIcon"><img src="assets/images/liquor07.svg" alt="liquor-icon"></span>
               <p>Other <span class="countBadge">72</span></p>
+            </button>
+          </li>
+
+          <div class="d-flex justify-content-between align-items-center ms-auto">
+            <div class="searchBar position-relative">
+              <span class="searchIcon"><img src="assets/images/search-icon.svg" alt="search-icon"></span>
+              <input type="search" placeholder="Search by location">
             </div>
           </div>
+        </ul>
 
+        <div class="tab-content" id="pills-tabContent01">
+          <div class="tab-pane fade show active" id="liquor01" role="tabpanel" aria-labelledby="liquor01-tab">
+            <div class="tableOuter mt-4">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>No.</th>
+                      <th>Liquor Name</th>
+                      <th>Liquor Type</th>
+                      <th>Price</th>
+                      <th>Thumbnail</th>
+                      <th>Distributor</th>
+                      <th>Edit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1.</td>
+                      <td>Hendrick's Gin</td>
+                      <td>Tequila</td>
+                      <td>$12.00</td>
+                      <td>
+                        <div class="tabeImg"><img src="assets/images/tableImg.png" alt="table-img" width="30"></div>
+                      </td>
+                      <td>Southern</td>
+                      <td>
+                        <div class="tableBtnWrap">
+                          <button class="tableBtn editBtn" type="button"><img src="assets/images/edit-icon.svg"
+                              alt="edit-icon"></button>
+                          <button class="tableBtn trashBtn" type="button"><img src="assets/images/trash-icon.svg"
+                              alt="trash-icon"></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>1.</td>
+                      <td>Hendrick's Gin</td>
+                      <td>Tequila</td>
+                      <td>$12.00</td>
+                      <td>
+                        <div class="tabeImg"><img src="assets/images/tableImg.png" alt="table-img" width="30"></div>
+                      </td>
+                      <td>Southern</td>
+                      <td>
+                        <div class="tableBtnWrap">
+                          <button class="tableBtn editBtn" type="button"><img src="assets/images/edit-icon.svg"
+                              alt="edit-icon"></button>
+                          <button class="tableBtn trashBtn" type="button"><img src="assets/images/trash-icon.svg"
+                              alt="trash-icon"></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>1.</td>
+                      <td>Hendrick's Gin</td>
+                      <td>Tequila</td>
+                      <td>$12.00</td>
+                      <td>
+                        <div class="tabeImg"><img src="assets/images/tableImg.png" alt="table-img" width="30"></div>
+                      </td>
+                      <td>Southern</td>
+                      <td>
+                        <div class="tableBtnWrap">
+                          <button class="tableBtn editBtn" type="button"><img src="assets/images/edit-icon.svg"
+                              alt="edit-icon"></button>
+                          <button class="tableBtn trashBtn" type="button"><img src="assets/images/trash-icon.svg"
+                              alt="trash-icon"></button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="liquor02" role="tabpanel" aria-labelledby="liquor02-tab">
+            liquor02
+          </div>
+          <div class="tab-pane fade" id="liquor03" role="tabpanel" aria-labelledby="liquor03-tab">
+            liquor03
+          </div>
+          <div class="tab-pane fade" id="liquor04" role="tabpanel" aria-labelledby="liquor04-tab">
+            liquor04
+          </div>
+          <div class="tab-pane fade" id="liquor05" role="tabpanel" aria-labelledby="liquor05-tab">
+            liquor05
+          </div>
+          <div class="tab-pane fade" id="liquor06" role="tabpanel" aria-labelledby="liquor06-tab">
+            liquor06
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade buzzModal" id="AddLiquor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="pageTitle" id="exampleModalLabel">Add Liquor Specials</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
           <div class="searchBar position-relative">
             <span class="searchIcon"><img src="assets/images/search-icon.svg" alt="search-icon"></span>
-            <input type="search" placeholder="Search by location">
+            <input type="search" placeholder="Search by Name">
+          </div>
+
+          <div class="tableOuter mt-3">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Liquor Name</th>
+                    <th>Liquor Type</th>
+                    <th>Price</th>
+                    <th>Thumbnail</th>
+                    <th>Distributor</th>
+                    <th>Edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1.</td>
+                    <td>Hendrick's Gin</td>
+                    <td>Tequila</td>
+                    <td>$12.00</td>
+                    <td>
+                      <div class="tabeImg"><img src="assets/images/tableImg.png" alt="table-img" width="30"></div>
+                    </td>
+                    <td>Southern</td>
+                    <td>
+                      <button id="openSecondModalBtn" class="btn primaryBtn" type="button">Add to happy hour</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2.</td>
+                    <td>Hendrick's Gin</td>
+                    <td>Tequila</td>
+                    <td>$12.00</td>
+                    <td>
+                      <div class="tabeImg"><img src="assets/images/tableImg.png" alt="table-img" width="30"></div>
+                    </td>
+                    <td>Southern</td>
+                    <td>
+                      <button class="btn primaryBtn" type="button">Add to happy hour</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3.</td>
+                    <td>Hendrick's Gin</td>
+                    <td>Tequila</td>
+                    <td>$12.00</td>
+                    <td>
+                      <div class="tabeImg"><img src="assets/images/tableImg.png" alt="table-img" width="30"></div>
+                    </td>
+                    <td>Southern</td>
+                    <td>
+                      <button class="btn primaryBtn" type="button">Add to happy hour</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
 
+      </div>
+    </div>
+  </div>
 
-        <div class="tableOuter mt-4">
-          <div class="table-responsive">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>No.</th>
-                  <th>Liquor Name</th>
-                  <th>Liquor Type</th>
-                  <th>Price</th>
-                  <th>Thumbnail</th>
-                  <th>Distributor</th>
-                  <th>Edit</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1.</td>
-                  <td>Hendrick's Gin</td>
-                  <td>Tequila</td>
-                  <td>$12.00</td>
-                  <td>
-                    <div class="tabeImg"><img src="assets/images/tableImg.png" alt="table-img" width="30"></div>
-                  </td>
-                  <td>Southern</td>
-                  <td>
-                    <div class="tableBtnWrap">
-                      <button class="tableBtn editBtn" type="button"><img src="assets/images/edit-icon.svg"
-                          alt="edit-icon"></button>
-                      <button class="tableBtn trashBtn" type="button"><img src="assets/images/trash-icon.svg"
-                          alt="trash-icon"></button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1.</td>
-                  <td>Hendrick's Gin</td>
-                  <td>Tequila</td>
-                  <td>$12.00</td>
-                  <td>
-                    <div class="tabeImg"><img src="assets/images/tableImg.png" alt="table-img" width="30"></div>
-                  </td>
-                  <td>Southern</td>
-                  <td>
-                    <div class="tableBtnWrap">
-                      <button class="tableBtn editBtn" type="button"><img src="assets/images/edit-icon.svg"
-                          alt="edit-icon"></button>
-                      <button class="tableBtn trashBtn" type="button"><img src="assets/images/trash-icon.svg"
-                          alt="trash-icon"></button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1.</td>
-                  <td>Hendrick's Gin</td>
-                  <td>Tequila</td>
-                  <td>$12.00</td>
-                  <td>
-                    <div class="tabeImg"><img src="assets/images/tableImg.png" alt="table-img" width="30"></div>
-                  </td>
-                  <td>Southern</td>
-                  <td>
-                    <div class="tableBtnWrap">
-                      <button class="tableBtn editBtn" type="button"><img src="assets/images/edit-icon.svg"
-                          alt="edit-icon"></button>
-                      <button class="tableBtn trashBtn" type="button"><img src="assets/images/trash-icon.svg"
-                          alt="trash-icon"></button>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+
+  <div class="modal fade buzzModal" id="happyHours" tabindex="-1" aria-labelledby="secondModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="pageTitle"><span id="backToFirstModalBtn" class="cursorPointer"><img
+                src="assets/images/back-icon.svg" alt="back-icon"></span> Add to happy hour</h5>
+        </div>
+        <div class="modal-body">
+
+          <div class="row">
+            <div class="col-4">
+              <label class="form-label">Make it a special:</label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="">
+                <label class="form-check-label" for="flexCheckDefault">
+                  On - Time Special
+                </label>
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="form-label">.</label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Permanent Special
+                </label>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group">
+                <label class="form-label">Price</label>
+                <input type="test" class="form-control" placeholder="$10">
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 text-center">
+            <button class="btn primaryBtn" type="button" data-bs-dismiss="modal" aria-label="Close">Save</button>
           </div>
         </div>
       </div>
@@ -233,6 +393,7 @@
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
 
   <script>
     $(".closeBtn").on("click", function () {
@@ -263,6 +424,23 @@
         prevArrow: $prev,
         nextArrow: $next,
       });
+    });
+  </script>
+
+  <script>
+    const AddLiquor = new bootstrap.Modal(document.getElementById('AddLiquor'));
+    const happyHours = new bootstrap.Modal(document.getElementById('happyHours'));
+
+    // When clicking "Next" from first modal
+    document.getElementById('openSecondModalBtn').addEventListener('click', () => {
+      AddLiquor.hide();
+      happyHours.show();
+    });
+
+    // When clicking "Back" from second modal
+    document.getElementById('backToFirstModalBtn').addEventListener('click', () => {
+      happyHours.hide();
+      AddLiquor.show();
     });
   </script>
 

@@ -12,6 +12,7 @@
     --greyColor: #656565;
     --geryTextColor: #A6A6A6;
     --greyBg: rgba(235, 235, 235, 0.6);
+    --borderColor:#BABABA;
     --transition01: .4s all;
 }
 
@@ -172,6 +173,118 @@ textarea.form-control {
     font-weight: 300;
 }
 
+/* Checkbox Design */
+.checkboxList li {
+    position: relative;
+    padding: 6px 0px 6px 24px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--greyColor);
+}
+
+.custom-checkbox {
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 7px;
+}
+
+.custom-checkbox input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid var(--borderColor);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background:var(--gredientBg);
+  border-color: transparent;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  display: block;
+}
+
+/* Radio Button Design */
+.custom-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.custom-radio {
+    position: relative;
+    padding: 5px 0 5px 24px;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--greyColor);
+    user-select: none;
+    line-height: normal;
+}
+
+.custom-radio input {
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.custom-radio .circle {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--borderColor);
+    transition: all 0.3s ease;
+}
+
+.custom-radio input:checked + .circle {
+  background:var(--gredientBg);
+  border: none;
+}
+
+.custom-radio input:checked + .circle::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 7px;
+    height: 7px;
+    background: white;
+    border-radius: 50%;
+}
+
+
 /* Dashboard */
 .dashboardWrap {
     display: inline-block;
@@ -310,6 +423,13 @@ textarea.form-control {
     margin-bottom: 24px;
 }
 
+.shadowCard {
+    padding: 18px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px 0px rgba(178, 178, 178, 0.37);
+    margin-bottom: 24px;
+}
+
 .topNav span {
     width: 40px;
     height: 40px;
@@ -339,6 +459,23 @@ span.searchIcon {
 }
 
 .filterDiv {
+    background: var(--whiteColor);
+    border: none;
+    padding: 0 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
+    line-height: 40px;
+    color: var(--iconColor);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.filterDropdown .filterBtn {
     background: var(--whiteColor);
     border: none;
     padding: 0 16px;
@@ -434,7 +571,7 @@ span.searchIcon {
     z-index: 1;
 }
 
-.imgCardIcon span {
+.imgCardIcon span, .imgCardIcon a {
     display: inline-flex;
     background: var(--whiteColor);
     width: 24px;
@@ -447,7 +584,7 @@ span.searchIcon {
 }
 
 
-.slideCard h5 {
+.slideCard h5, .titleSm {
     font-size: 18px;
     color: var(--titleColor);
     margin-bottom: 16px;
@@ -551,7 +688,7 @@ span.counter {
     min-width: 120px;
 }
 
-
+/* Beverages Page */
 .liquorList {
     display: inline-flex;
     flex-flow: wrap;
@@ -603,6 +740,44 @@ span.counter {
     color: var(--whiteColor);
 } 
 
+.liquorTab.nav-pills .nav-link {
+    color: var(--textColor);
+    font-size: 12px;
+    font-weight: 400;
+    padding: 9px 20px;
+    border-radius: 10px;
+}
+
+.liquorTab .liquorIcon {
+    display: inline-block;
+    height: 21px;
+    width: auto;
+    margin-bottom: 8px;
+}
+
+.liquorTab.nav-pills .nav-link .countBadge {
+    border: 0.3px solid var(--greyColor);
+    padding: 2px 7px 1px;
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 12px;
+    display: inline-block;
+    margin-left: 2px;
+    background-color: var(--whiteColor);
+    color: var(--textColor);
+    line-height: normal;
+}
+
+.liquorTab.nav-pills .nav-link.active, .liquorTab.nav-pills .show>.nav-link {
+    background-image: var(--gredientBg);
+    color: var(--whiteColor);
+}
+
+.liquorTab.nav-pills .nav-link.active img {
+    filter: brightness(0) invert(1);
+}
+
+
 .tableOuter table thead th {
     font-size: 14px;
     font-weight: 700;
@@ -652,9 +827,7 @@ span.counter {
 }
 
 
-
-
-
+/* Event Page */
 .eventCards .imgContent h4 {
     font-size: 14px;
 }
@@ -694,6 +867,10 @@ span.counter {
 .eventTabs.nav-pills .nav-link.active{
     color: var(--whiteColor);
     background: var(--gredientBg);
+}
+
+.viewSelectBox select {
+    color: var(--textColor);
 }
 
 

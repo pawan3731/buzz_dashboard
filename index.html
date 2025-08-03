@@ -124,9 +124,37 @@
             <span class="searchIcon"><img src="assets/images/search-icon.svg" alt="search-icon"></span>
             <input type="search" placeholder="Search by location">
           </div>
-          <div class="filterDiv">
-            <img src="assets/images/filter-icon.svg" alt="filter-icon">
-            Filter
+          <div class="filterDropdown">
+            <div class="dropdown">
+              <button class="filterBtn" type="button" id="filterDropdown" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="assets/images/filter-icon.svg" alt="filter-icon">
+                Filter
+              </button>
+
+              <div class="dropdown-menu p-3" aria-labelledby="filterDropdown" style="min-width: 220px;"
+                data-bs-auto-close="outside">
+                <div class="custom-radio-group">
+                  <label class="custom-radio">
+                    <input type="radio" name="eventFilter" value="soonest">
+                    <span class="circle"></span>
+                    Event Coming Soonest
+                  </label>
+                  <label class="custom-radio">
+                    <input type="radio" name="eventFilter" value="recent">
+                    <span class="circle"></span>
+                    Most Recently Added
+                  </label>
+                  <label class="custom-radio">
+                    <input type="radio" name="eventFilter" value="latest">
+                    <span class="circle"></span>
+                    Event Coming Latest
+                  </label>
+                </div>
+                <hr>
+                <button class="btn primaryBtn w-100">Apply Filter</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -151,8 +179,8 @@
           <div class="dashboardImgCard">
             <img src="assets/images/dashboardImg02.jpg" alt="event-img">
             <div class="imgCardIcon">
-              <span><img src="assets/images/location.svg" alt="location"></span>
-              <span><img src="assets/images/chart.svg" alt="location"></span>
+              <a href="#"><img src="assets/images/location.svg" alt="location"></a>
+              <a href="#"><img src="assets/images/chart.svg" alt="location"></a>
             </div>
             <div class="imgContent">
               <h4>NKY Dance</h4>
@@ -167,8 +195,8 @@
           <div class="dashboardImgCard">
             <img src="assets/images/dashboardImg03.jpg" alt="event-img">
             <div class="imgCardIcon">
-              <span><img src="assets/images/location.svg" alt="location"></span>
-              <span><img src="assets/images/chart.svg" alt="location"></span>
+              <a href="#"><img src="assets/images/location.svg" alt="location"></a>
+              <a href="#"><img src="assets/images/chart.svg" alt="location"></a>
             </div>
             <div class="imgContent">
               <h4>NKY Dance</h4>
@@ -183,8 +211,8 @@
           <div class="dashboardImgCard">
             <img src="assets/images/dashboardImg01.jpg" alt="event-img">
             <div class="imgCardIcon">
-              <span><img src="assets/images/location.svg" alt="location"></span>
-              <span><img src="assets/images/chart.svg" alt="location"></span>
+              <a href="#"><img src="assets/images/location.svg" alt="location"></a>
+              <a href="#"><img src="assets/images/chart.svg" alt="location"></a>
             </div>
             <div class="imgContent">
               <h4>NKY Dance</h4>
@@ -199,39 +227,119 @@
 
       <div class="row mt-4">
         <div class="col-lg-9">
-          <img src="assets/images/map.jpg" alt="map-img" class="w-100 rounded">
+          <div class="whiteCard">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+                  <h5 class="titleSm mb-0">Event Analytics</h5>
+                  <div class="viewSelectBox ms-auto">
+                    <select class="form-select ps-3" aria-label="Default select example">
+                      <option selected>1 Week Views</option>
+                      <option value="1">2 Week Views</option>
+                      <option value="2">3 Week Views</option>
+                      <option value="3">4 Week Views</option>
+                    </select>
+                  </div>
+                </div>
+                <ul class=" nav nav-pills mb-3 eventTabs align-items-center gap-1" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="chartTab01-tab" data-bs-toggle="pill"
+                      data-bs-target="#chartTab01" type="button" role="tab" aria-controls="chartTab01"
+                      aria-selected="true">Views</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="chartTab02-tab" data-bs-toggle="pill" data-bs-target="#chartTab02"
+                      type="button" role="tab" aria-controls="chartTab02" aria-selected="false">Clicks</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="chartTab03-tab" data-bs-toggle="pill" data-bs-target="#chartTab03"
+                      type="button" role="tab" aria-controls="chartTab03" aria-selected="false">Shared Events</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="chartTab04-tab" data-bs-toggle="pill" data-bs-target="#chartTab04"
+                      type="button" role="tab" aria-controls="chartTab04" aria-selected="false">Tickets Click</button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="chartTab01" role="tabpanel"
+                    aria-labelledby="chartTab01-tab">
+                    <img src="assets/images/map01.png" class="w-100"">
+                </div>
+                  <div class=" tab-pane fade" id="chartTab02" role="tabpanel" aria-labelledby="chartTab02-tab">
+                    chartTab02
+                  </div>
+                  <div class="tab-pane fade" id="chartTab03" role="tabpanel" aria-labelledby="chartTab03-tab">
+                    chartTab03
+                  </div>
+                  <div class="tab-pane fade" id="chartTab04" role="tabpanel" aria-labelledby="chartTab04-tab">
+                    chartTab04
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+                  <h5 class="titleSm mb-0">Interactions</h5>
+                  <span class="pageTitle">19,760</span>
+                </div>
+                <div class="chart03">
+                  <img src="assets/images/map03.png" alt="map-3">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col-lg-3">
+          <div class="whiteCard">
+            <h5 class="titleSm">Checkpoints</h5>
+            <ul class="checkboxList">
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" checked />
+                  <span class="checkmark"></span>
+                </label>
+                <span>Complete Profile</span>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <span>Add Events</span>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <span>Explore Trade Coins</span>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <span>Watch "How BUUZ Works" Video</span>
+              </li>
+            </ul>
+          </div>
           <div class="whiteCard slideCard">
             <h5>How BUZZ Works</h5>
             <div class="slick-slider">
               <div class="sliderBox">
-                <img src="assets/images/sliderImg.jpg" alt="slider-1">
+                <div class="leftVideo">
+                  <iframe width="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
                 <p>Bullet edit shadow layout scrolling Vector group bold create create invite shadow ellipse. Align
                   scale hand pixel align font rotate polygon group strikethrough. Flows boolean asset distribute
                   selection union.</p>
-                <button class="btn primaryBtn" type="button">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10.4451 4.41185C10.7333 4.5651 10.9743 4.79386 11.1424 5.07363C11.3105 5.35339 11.3993 5.67362 11.3993 6.00001C11.3993 6.32639 11.3105 6.64662 11.1424 6.92639C10.9743 7.20615 10.7333 7.43492 10.4451 7.58816L2.75812 11.7682C1.52035 12.442 0 11.566 0 10.1807V1.81993C0 0.433972 1.52035 -0.441402 2.75812 0.231178L10.4451 4.41185Z"
-                      fill="white" />
-                  </svg>
-                  Watch Video
-                </button>
               </div>
               <div class="sliderBox">
-                <img src="assets/images/sliderImg.jpg" alt="slider-1">
+                <div class="leftVideo">
+                  <iframe width="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
                 <p>Bullet edit shadow layout scrolling Vector group bold create create invite shadow ellipse. Align
                   scale hand pixel align font rotate polygon group strikethrough. Flows boolean asset distribute
                   selection union.</p>
-                <button class="btn primaryBtn" type="button">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10.4451 4.41185C10.7333 4.5651 10.9743 4.79386 11.1424 5.07363C11.3105 5.35339 11.3993 5.67362 11.3993 6.00001C11.3993 6.32639 11.3105 6.64662 11.1424 6.92639C10.9743 7.20615 10.7333 7.43492 10.4451 7.58816L2.75812 11.7682C1.52035 12.442 0 11.566 0 10.1807V1.81993C0 0.433972 1.52035 -0.441402 2.75812 0.231178L10.4451 4.41185Z"
-                      fill="white" />
-                  </svg>
-                  Watch Video
-                </button>
               </div>
             </div>
             <div class="slider-controls mt-3 d-flex align-items-center justify-content-center">
