@@ -114,10 +114,6 @@
           <div>
             <h2 class="pageTitle">BEVERAGES & FOOD AVAILABLE AT VENUE</h2>
           </div>
-          <div class="profilePageBtn">
-            <button class="btn primaryBtn" type="button" data-bs-toggle="modal" data-bs-target="#AddLiquor">+ Add
-              Liquor</button>
-          </div>
         </div>
 
         <ul class=" nav nav-pills mb-3 liquorTab align-items-center gap-1" id="pills-tab01" role="tablist">
@@ -174,7 +170,11 @@
 
         <div class="tab-content" id="pills-tabContent01">
           <div class="tab-pane fade show active" id="liquor01" role="tabpanel" aria-labelledby="liquor01-tab">
-            <div class="tableOuter mt-4">
+            <div class="text-end">
+              <button class="btn primaryBtn" type="button" data-bs-toggle="modal" data-bs-target="#AddLiquor">+
+                Add</button>
+            </div>
+            <div class="tableOuter mt-3">
               <div class="table-responsive">
                 <table class="table">
                   <thead>
@@ -268,128 +268,42 @@
     </div>
   </div>
 
-  <!-- Modal -->
   <div class="modal fade buzzModal" id="AddLiquor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 600px;">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="pageTitle" id="exampleModalLabel">Add Liquor Specials</h5>
+          <h5 class="pageTitle" id="exampleModalLabel">Add Liquor</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="searchBar position-relative">
-            <span class="searchIcon"><img src="assets/images/search-icon.svg" alt="search-icon"></span>
-            <input type="search" placeholder="Search by Name">
-          </div>
-
-          <div class="tableOuter mt-3">
-            <div class="table-responsive">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>No.</th>
-                    <th>Liquor Name</th>
-                    <th>Liquor Type</th>
-                    <th>Price</th>
-                    <th>Thumbnail</th>
-                    <th>Distributor</th>
-                    <th>Edit</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1.</td>
-                    <td>Hendrick's Gin</td>
-                    <td>Tequila</td>
-                    <td>$12.00</td>
-                    <td>
-                      <div class="tabeImg"><img src="assets/images/tableImg.png" alt="table-img" width="30"></div>
-                    </td>
-                    <td>Southern</td>
-                    <td>
-                      <button id="openSecondModalBtn" class="btn primaryBtn" type="button">Add to happy hour</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>2.</td>
-                    <td>Hendrick's Gin</td>
-                    <td>Tequila</td>
-                    <td>$12.00</td>
-                    <td>
-                      <div class="tabeImg"><img src="assets/images/tableImg.png" alt="table-img" width="30"></div>
-                    </td>
-                    <td>Southern</td>
-                    <td>
-                      <button class="btn primaryBtn" type="button">Add to happy hour</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>3.</td>
-                    <td>Hendrick's Gin</td>
-                    <td>Tequila</td>
-                    <td>$12.00</td>
-                    <td>
-                      <div class="tabeImg"><img src="assets/images/tableImg.png" alt="table-img" width="30"></div>
-                    </td>
-                    <td>Southern</td>
-                    <td>
-                      <button class="btn primaryBtn" type="button">Add to happy hour</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-  <div class="modal fade buzzModal" id="happyHours" tabindex="-1" aria-labelledby="secondModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="pageTitle"><span id="backToFirstModalBtn" class="cursorPointer"><img
-                src="assets/images/back-icon.svg" alt="back-icon"></span> Add to happy hour</h5>
-        </div>
-        <div class="modal-body">
-
-          <div class="row">
-            <div class="col-4">
-              <label class="form-label">Make it a special:</label>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="">
-                <label class="form-check-label" for="flexCheckDefault">
-                  On - Time Special
-                </label>
+          <form>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group position-relative">
+                  <label class="form-label">Select liquor Name :*</label>
+                  <input type="text" class="form-control" placeholder="Enter liquor name...">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group position-relative">
+                  <label class="form-label">Price (in $)</label>
+                  <input type="text" class="form-control" placeholder="Enter price...">
+                </div>
+              </div>
+              <div class="col-lg-12 mt-3">
+                <div class="profilePageBtn text-center">
+                  <button class="btn outlineBtn" type="button">Cancel</button>
+                  <button class="btn primaryBtn" type="button">Save</button>
+                </div>
               </div>
             </div>
-            <div class="col-4">
-              <label class="form-label">.</label>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="">
-                <label class="form-check-label" for="flexCheckDefault">
-                  Permanent Special
-                </label>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="form-group">
-                <label class="form-label">Price</label>
-                <input type="test" class="form-control" placeholder="$10">
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-4 text-center">
-            <button class="btn primaryBtn" type="button" data-bs-dismiss="modal" aria-label="Close">Save</button>
-          </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
+
+
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>

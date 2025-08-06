@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="assets/fonts/stylesheet.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/custom.css" rel="stylesheet">
   <link href="assets/css/responsive.css" rel="stylesheet">
@@ -112,6 +113,10 @@
 
         <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
           <h5 class="pageTitle">Happy Hour Specialss</h5>
+          <div class="profilePageBtn">
+            <button class="btn primaryBtn" type="button" data-bs-toggle="modal" data-bs-target="#AddLiquor">+ Add
+              Liquor</button>
+          </div>
         </div>
 
         <ul class=" nav nav-pills mb-3 liquorTab align-items-center gap-1" id="pills-tab01" role="tablist">
@@ -294,9 +299,359 @@
     </div>
   </div>
 
+  <!-- Modal -->
+  <div class="modal fade buzzModal" id="AddLiquor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="pageTitle" id="exampleModalLabel">Add Liquor Specials</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="searchBar position-relative">
+            <span class="searchIcon"><img src="assets/images/search-icon.svg" alt="search-icon"></span>
+            <input type="search" placeholder="Search by Name">
+          </div>
+
+          <div class="tableOuter mt-3">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Liquor Name</th>
+                    <th>Liquor Type</th>
+                    <th>Price</th>
+                    <th>Thumbnail</th>
+                    <th>Distributor</th>
+                    <th>Edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1.</td>
+                    <td>Hendrick's Gin</td>
+                    <td>Tequila</td>
+                    <td>$12.00</td>
+                    <td>
+                      <div class="tabeImg"><img src="assets/images/tableImg.png" alt="table-img" width="30"></div>
+                    </td>
+                    <td>Southern</td>
+                    <td>
+                      <button id="openSecondModalBtn" class="btn primaryBtn" type="button">Add to happy hour</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2.</td>
+                    <td>Hendrick's Gin</td>
+                    <td>Tequila</td>
+                    <td>$12.00</td>
+                    <td>
+                      <div class="tabeImg"><img src="assets/images/tableImg.png" alt="table-img" width="30"></div>
+                    </td>
+                    <td>Southern</td>
+                    <td>
+                      <button class="btn primaryBtn" type="button">Add to happy hour</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3.</td>
+                    <td>Hendrick's Gin</td>
+                    <td>Tequila</td>
+                    <td>$12.00</td>
+                    <td>
+                      <div class="tabeImg"><img src="assets/images/tableImg.png" alt="table-img" width="30"></div>
+                    </td>
+                    <td>Southern</td>
+                    <td>
+                      <button class="btn primaryBtn" type="button">Add to happy hour</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade buzzModal" id="happyHours" tabindex="-1" aria-labelledby="secondModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 710px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="pageTitle"><span id="backToFirstModalBtn" class="cursorPointer"><img
+                src="assets/images/back-icon.svg" alt="back-icon"></span> Add to happy hour</h5>
+        </div>
+        <div class="modal-body">
+
+          <div class="row">
+            <div class="col-4">
+              <label class="form-label">Make it a special:</label>
+              <div class="form-check">
+                <input class="form-check-input" name="specialField" type="radio" value="time" onclick="timeHide_Show()">
+                <label class="form-check-label" for="flexCheckDefault">
+                  On - Time Special
+                </label>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <label class="form-label invisible">.</label>
+              <div class="form-check">
+                <input class="form-check-input" name="specialField" type="radio" value="calendar"
+                  onclick="timeHide_Show()">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Permanent Special
+                </label>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group">
+                <label class="form-label">Price</label>
+                <input type="test" class="form-control" placeholder="$10">
+              </div>
+            </div>
+
+            <div class="col-12" id="timeDiv" style="display: none;">
+              <div class="mx-auto mt-3" style="max-width: 550px;">
+                <div class="d-flex justify-content-end align-items-center gap-2 appyTimeAll">
+                  <input type="checkbox" id="copyMonday" />
+                  <label for="copyMonday">Apply Monday's times to all days</label>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3 class="mt-0">Monday</h3>
+                  <div class="day-row" data-day="monday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Tuesday</h3>
+                  <div class="day-row" data-day="tuesday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Wednesday</h3>
+                  <div class="day-row" data-day="wednesday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Thursday</h3>
+                  <div class="day-row" data-day="thursday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Friday</h3>
+                  <div class="day-row" data-day="friday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Saturday</h3>
+                  <div class="day-row" data-day="saturday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Sunday</h3>
+                  <div class="day-row" data-day="sunday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12" id="calendarDiv" style="display: none;">
+              Calendar View
+            </div>
+          </div>
+
+          <div class="mt-4 text-center profilePageBtn">
+            <button class="btn outlineBtn" type="button" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            <button class="btn primaryBtn" type="button" data-bs-dismiss="modal" aria-label="Close">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    function timeHide_Show() {
+      const selectedVal = $("input[name='specialField']:checked").val();
+
+      // Hide both first
+      $("#timeDiv").hide();
+      $("#calendarDiv").hide();
+
+      if (selectedVal === "calendar") {
+        $("#timeDiv").show();
+      } else if (selectedVal === "time") {
+        $("#calendarDiv").show();
+      }
+    }
+
+    
+
+    document.getElementById("copyMonday").addEventListener("change", function () {
+      const checked = this.checked;
+
+      const mondayRow = document.querySelector('[data-day="monday"]');
+      const mondayFromTime = mondayRow.querySelector(".from-time").value;
+      const mondayFromMeridian = mondayRow.querySelectorAll("select")[0].value;
+
+      const mondayToTime = mondayRow.querySelector(".to-time").value;
+      const mondayToMeridian = mondayRow.querySelectorAll("select")[1].value;
+
+      document.querySelectorAll(".day-row").forEach((row) => {
+        const day = row.getAttribute("data-day");
+        if (day !== "monday" && checked) {
+          row.querySelector(".from-time").value = mondayFromTime;
+          row.querySelectorAll("select")[0].value = mondayFromMeridian;
+
+          row.querySelector(".to-time").value = mondayToTime;
+          row.querySelectorAll("select")[1].value = mondayToMeridian;
+        }
+      });
+    });
+  </script>
+
+
 
   <script>
     $(".closeBtn").on("click", function () {
@@ -353,6 +708,33 @@
     document.getElementById('backToFirstModalBtn').addEventListener('click', () => {
       happyHours.hide();
       AddLiquor.show();
+    });
+  </script>
+
+  <script>
+    $(document).on('click', '.tableBtn', function () {
+      const itemId = $(this).data('id');
+
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "This action cannot be undone!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // 🔥 Delete logic here
+          $.ajax({
+            url: '/delete/' + itemId,
+            type: 'DELETE',
+            success: function () {
+              Swal.fire('Deleted!', 'Your item has been deleted.', 'success');
+              // Optionally remove row
+              // $(this).closest('.item-row').remove();
+            }
+          });
+        }
+      });
     });
   </script>
 
