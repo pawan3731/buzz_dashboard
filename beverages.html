@@ -121,40 +121,47 @@
             <button class="nav-link active" id="liquor01-tab" data-bs-toggle="pill" data-bs-target="#liquor01"
               type="button" role="tab" aria-controls="liquor01" aria-selected="true">
               <span class="liquorIcon"><img src="assets/images/liquor02.svg" alt="liquor-icon"></span>
-              <p>Cocktails <span class="countBadge">72</span></p>
+              <p>Liquor <span class="countBadge">72</span></p>
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="liquor02-tab" data-bs-toggle="pill" data-bs-target="#liquor02" type="button"
-              role="tab" aria-controls="liquor02" aria-selected="true">
-              <span class="liquorIcon"><img src="assets/images/liquor03.svg" alt="liquor-icon"></span>
-              <p>Beers <span class="countBadge">72</span></p>
+            <button class="nav-link" id="liquor02-tab" data-bs-toggle="pill" data-bs-target="#liquor02"
+              type="button" role="tab" aria-controls="liquor02" aria-selected="true">
+              <span class="liquorIcon"><img src="assets/images/liquor02.svg" alt="liquor-icon"></span>
+              <p>Cocktails <span class="countBadge">72</span></p>
             </button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="liquor03-tab" data-bs-toggle="pill" data-bs-target="#liquor03" type="button"
               role="tab" aria-controls="liquor03" aria-selected="true">
-              <span class="liquorIcon"><img src="assets/images/liquor04.svg" alt="liquor-icon"></span>
-              <p>Wines <span class="countBadge">72</span></p>
+              <span class="liquorIcon"><img src="assets/images/liquor03.svg" alt="liquor-icon"></span>
+              <p>Beers <span class="countBadge">72</span></p>
             </button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="liquor04-tab" data-bs-toggle="pill" data-bs-target="#liquor04" type="button"
               role="tab" aria-controls="liquor04" aria-selected="true">
-              <span class="liquorIcon"><img src="assets/images/liquor05.svg" alt="liquor-icon"></span>
-              <p>Non-Alcoholics <span class="countBadge">72</span></p>
+              <span class="liquorIcon"><img src="assets/images/liquor04.svg" alt="liquor-icon"></span>
+              <p>Wines <span class="countBadge">72</span></p>
             </button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="liquor05-tab" data-bs-toggle="pill" data-bs-target="#liquor05" type="button"
               role="tab" aria-controls="liquor05" aria-selected="true">
-              <span class="liquorIcon"><img src="assets/images/liquor06.svg" alt="liquor-icon"></span>
-              <p>Food <span class="countBadge">72</span></p>
+              <span class="liquorIcon"><img src="assets/images/liquor05.svg" alt="liquor-icon"></span>
+              <p>Non-Alcoholics <span class="countBadge">72</span></p>
             </button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="liquor06-tab" data-bs-toggle="pill" data-bs-target="#liquor06" type="button"
               role="tab" aria-controls="liquor06" aria-selected="true">
+              <span class="liquorIcon"><img src="assets/images/liquor06.svg" alt="liquor-icon"></span>
+              <p>Food <span class="countBadge">72</span></p>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="liquor07-tab" data-bs-toggle="pill" data-bs-target="#liquor07" type="button"
+              role="tab" aria-controls="liquor07" aria-selected="true">
               <span class="liquorIcon"><img src="assets/images/liquor07.svg" alt="liquor-icon"></span>
               <p>Other <span class="countBadge">72</span></p>
             </button>
@@ -249,19 +256,46 @@
             </div>
           </div>
           <div class="tab-pane fade" id="liquor02" role="tabpanel" aria-labelledby="liquor02-tab">
+            <div class="text-end">
+              <button class="btn primaryBtn" type="button" data-bs-toggle="modal" data-bs-target="#AddCocktail">+
+                Add</button>
+            </div>
             liquor02
           </div>
           <div class="tab-pane fade" id="liquor03" role="tabpanel" aria-labelledby="liquor03-tab">
+            <div class="text-end">
+              <button class="btn primaryBtn" type="button" data-bs-toggle="modal" data-bs-target="#AddBeer">+
+                Add</button>
+            </div>
             liquor03
           </div>
           <div class="tab-pane fade" id="liquor04" role="tabpanel" aria-labelledby="liquor04-tab">
+            <div class="text-end">
+              <button class="btn primaryBtn" type="button" data-bs-toggle="modal" data-bs-target="#AddWine">+
+                Add</button>
+            </div>
             liquor04
           </div>
           <div class="tab-pane fade" id="liquor05" role="tabpanel" aria-labelledby="liquor05-tab">
+            <div class="text-end">
+              <button class="btn primaryBtn" type="button" data-bs-toggle="modal" data-bs-target="#AddNonAlcoholic">+
+                Add</button>
+            </div>
             liquor05
           </div>
           <div class="tab-pane fade" id="liquor06" role="tabpanel" aria-labelledby="liquor06-tab">
+            <div class="text-end">
+              <button class="btn primaryBtn" type="button">+
+                Add</button>
+            </div>
             liquor06
+          </div>
+          <div class="tab-pane fade" id="liquor07" role="tabpanel" aria-labelledby="liquor07-tab">
+            <div class="text-end">
+              <button class="btn primaryBtn" type="button">+
+                Add</button>
+            </div>
+            liquor07
           </div>
         </div>
       </div>
@@ -281,6 +315,206 @@
               <div class="col-lg-12">
                 <div class="form-group position-relative">
                   <label class="form-label">Select liquor Name :*</label>
+                  <input type="text" class="form-control" placeholder="Enter liquor name...">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group position-relative">
+                  <label class="form-label">Price (in $)</label>
+                  <input type="text" class="form-control" placeholder="Enter price...">
+                </div>
+              </div>
+              <div class="col-lg-12 mt-3">
+                <div class="profilePageBtn text-center">
+                  <button class="btn outlineBtn" type="button">Cancel</button>
+                  <button class="btn primaryBtn" type="button">Save</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade buzzModal" id="AddBeer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 600px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="pageTitle" id="exampleModalLabel">Add Beer</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group position-relative">
+                  <label class="form-label">Select Beer Name :*</label>
+                  <input type="text" class="form-control" placeholder="Enter liquor name...">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label class="form-label">Bottle*</label>
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="form-check">
+                      <input class="form-check-input" name="bottle" type="radio" value="">
+                      <label class="form-check-label" for="flexCheckDefault">Yes</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" name="bottle" type="radio" value="">
+                      <label class="form-check-label" for="flexCheckDefault">No</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label class="form-label">Tap*</label>
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="form-check">
+                      <input class="form-check-input" name="tap" type="radio" value="">
+                      <label class="form-check-label" for="flexCheckDefault">Yes</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" name="tap" type="radio" value="">
+                      <label class="form-check-label" for="flexCheckDefault">No</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group position-relative">
+                  <label class="form-label">Price (in $)</label>
+                  <input type="text" class="form-control" placeholder="Enter price...">
+                </div>
+              </div>
+              <div class="col-lg-12 mt-3">
+                <div class="profilePageBtn text-center">
+                  <button class="btn outlineBtn" type="button">Cancel</button>
+                  <button class="btn primaryBtn" type="button">Save</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade buzzModal" id="AddWine" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 600px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="pageTitle" id="exampleModalLabel">Add Wine</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group position-relative">
+                  <label class="form-label">Select Wine Name :*</label>
+                  <input type="text" class="form-control" placeholder="Enter liquor name...">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label class="form-label">Bottle*</label>
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="form-check">
+                      <input class="form-check-input" name="bottle" type="radio" value="">
+                      <label class="form-check-label" for="flexCheckDefault">Yes</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" name="bottle" type="radio" value="">
+                      <label class="form-check-label" for="flexCheckDefault">No</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label class="form-label">Tap*</label>
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="form-check">
+                      <input class="form-check-input" name="tap" type="radio" value="">
+                      <label class="form-check-label" for="flexCheckDefault">Yes</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" name="tap" type="radio" value="">
+                      <label class="form-check-label" for="flexCheckDefault">No</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group position-relative">
+                  <label class="form-label">Price (in $)</label>
+                  <input type="text" class="form-control" placeholder="Enter price...">
+                </div>
+              </div>
+              <div class="col-lg-12 mt-3">
+                <div class="profilePageBtn text-center">
+                  <button class="btn outlineBtn" type="button">Cancel</button>
+                  <button class="btn primaryBtn" type="button">Save</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div class="modal fade buzzModal" id="AddCocktail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 600px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="pageTitle" id="exampleModalLabel">Add Cocktail</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group position-relative">
+                  <label class="form-label">Select Cocktail Name :*</label>
+                  <input type="text" class="form-control" placeholder="Enter liquor name...">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group position-relative">
+                  <label class="form-label">Price (in $)</label>
+                  <input type="text" class="form-control" placeholder="Enter price...">
+                </div>
+              </div>
+              <div class="col-lg-12 mt-3">
+                <div class="profilePageBtn text-center">
+                  <button class="btn outlineBtn" type="button">Cancel</button>
+                  <button class="btn primaryBtn" type="button">Save</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div class="modal fade buzzModal" id="AddNonAlcoholic" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 600px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="pageTitle" id="exampleModalLabel">Add Non Alcoholic</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group position-relative">
+                  <label class="form-label">Select Non Alcoholic Name :*</label>
                   <input type="text" class="form-control" placeholder="Enter liquor name...">
                 </div>
               </div>

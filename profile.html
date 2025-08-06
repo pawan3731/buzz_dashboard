@@ -228,7 +228,7 @@
             <div class="greyBg mt-3">
               <div class="row g-2">
                 <div class="col-lg-6">
-                  <div class="form-group position-relative">
+                  <div class="form-group position-relative" data-bs-toggle="modal" data-bs-target="#workingHours">
                     <label class="form-label">Hours of Operation</label>
                     <input type="email" class="form-control" placeholder="Hours of Operation">
                     <span class="formIcon">
@@ -340,8 +340,386 @@
     </div>
   </div>
 
+  <div class="modal fade buzzModal" id="workingHours" tabindex="-1" aria-labelledby="secondModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 1240px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="pageTitle">Add Hours</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row g-5">
+            <div class="col-lg-6 hourBorderRight">
+              <div class="mx-auto">
+                <h3 class="textMd text-center mb-4">Working Hours</h3>
+                <div class="d-flex justify-content-end align-items-center gap-2 appyTimeAll">
+                  <input type="checkbox" id="copyMonday" />
+                  <label for="copyMonday">Apply Monday's times to all days</label>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3 class="mt-0">Monday</h3>
+                  <div class="day-row" data-day="monday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Tuesday</h3>
+                  <div class="day-row" data-day="tuesday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Wednesday</h3>
+                  <div class="day-row" data-day="wednesday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Thursday</h3>
+                  <div class="day-row" data-day="thursday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Friday</h3>
+                  <div class="day-row" data-day="friday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Saturday</h3>
+                  <div class="day-row" data-day="saturday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Sunday</h3>
+                  <div class="day-row" data-day="sunday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="mx-auto">
+                <h3 class="textMd text-center mb-4">Kitchen Hours</h3>
+                <div class="d-flex justify-content-end align-items-center gap-2 appyTimeAll">
+                  <input type="checkbox" id="copyMonday" />
+                  <label for="copyMonday">Apply same as working Hours</label>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3 class="mt-0">Monday</h3>
+                  <div class="day-row" data-day="monday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Tuesday</h3>
+                  <div class="day-row" data-day="tuesday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Wednesday</h3>
+                  <div class="day-row" data-day="wednesday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Thursday</h3>
+                  <div class="day-row" data-day="thursday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Friday</h3>
+                  <div class="day-row" data-day="friday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Saturday</h3>
+                  <div class="day-row" data-day="saturday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeRowWrap">
+                  <h3>Sunday</h3>
+                  <div class="day-row" data-day="sunday">
+                    <div>
+                      <label>From:</label>
+                      <input type="time" class="from-time" />
+                      <select class="from-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>To:</label>
+                      <input type="time" class="to-time" />
+                      <select class="to-ampm">
+                        <option selected>AM/PM</option>
+                        <option>AM</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="mt-3 text-center profilePageBtn">
+                <button class="btn outlineBtn" type="button" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                <button class="btn primaryBtn" type="button" data-bs-dismiss="modal" aria-label="Close">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
 
   <script>
     $(".closeBtn").on("click", function () {
