@@ -18,10 +18,8 @@
 
 
 /* Common Css */
- html, body { overflow-x: hidden; }
-
 body {
-    background-color:#FCF8F2;
+    background-color: rgba(235, 235, 235, 0.8);
 }
 
 body, ul, ol, h1, h2, h3, h4, h5, h6, p {
@@ -42,227 +40,1068 @@ a, a:focus, a:hover {
     text-decoration: none;
 }
 
-button:focus {
+.btn {
+    line-height: 40px;
+    padding: 0px 16px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: none;
+    transition: var(--transition01);
+}
+
+.largeBtn {
+    font-size: 18px;
+    line-height: 61px;
+    border-radius: 20px;
+    padding-inline: 24px;
+}
+
+.primaryBtn {
+    background: var(--gredientBg);
+    color: var(--whiteColor) !important;
+}
+
+.gradientOutlineBtn {
+    position: relative;
+}
+
+.gradientOutlineBtn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: linear-gradient(180deg, #D425FC, #9733EE);
+    border-radius: 12px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 0;
+}
+
+.outlineBtn {
+    border: 1px solid rgba(166, 166, 166, 0.3) !important;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+button:focus, select:focus, input:focus {
+    outline: unset !important;
     box-shadow: none !important;
 }
 
-.container {
-    max-width: 1120px;
+.textMd {
+    font-weight: 500;
+    color: var(--greyColor);
+    font-size: 20px;;
 }
 
+.titleColor {
+    color: var(--titleColor) !important;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.greyBg {
+    background-color: var(--greyBg);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+select.form-select, .form-control {
+    box-shadow: 0px 0px 6px 0px rgba(178, 178, 178, 0.37);
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--textColor);
+    height: 45px;
+}
+
+.select2-selection {
+    box-shadow: 0px 0px 6px 0px rgba(178, 178, 178, 0.37);
+    border: none !important;
+    border-radius: 12px !important;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--textColor);
+    padding: 6px;
+}
+
+textarea.form-control {
+    height: 142px;
+}
+
+.form-label {
+    margin-bottom: .7rem;
+    color: var(--titleColor);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.formNote {
+    font-size: 12px;
+    font-weight: 300;
+    opacity: 0.5;
+    color: var(--textColor);
+}
+
+.formIcon {
+    position: absolute;
+    bottom: 11px;
+    right: 16px;
+}
 
 
 .pageTitle {
     color: var(--titleColor);
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.pageSubTitle {
+    color: var(--geryTextColor);
     font-weight: 500;
     font-size: 18px;
-    margin-bottom: 24px;
 }
 
-.navbar-toggler {
-    right: 15px;
+.lightText {
+    font-weight: 300;
 }
 
-.liquorCard {
+/* Checkbox Design */
+.checkboxList li {
+    position: relative;
+    padding: 6px 0px 6px 24px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--greyColor);
+}
+
+.custom-checkbox {
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 7px;
+}
+
+.custom-checkbox input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid var(--borderColor);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background:var(--gredientBg);
+  border-color: transparent;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  display: block;
+}
+
+/* Radio Button Design */
+.custom-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.custom-radio {
+    position: relative;
+    padding: 5px 0 5px 24px;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--greyColor);
+    user-select: none;
+    line-height: normal;
+}
+
+.custom-radio input {
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    z-index: 9;
     cursor: pointer;
 }
 
-.liquorImg img {
-    height: 75px;
-    width: auto;
-    margin-bottom: 5px;
+.custom-radio .circle {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--borderColor);
+    transition: all 0.3s ease;
 }
 
-.liquorContent h6 {
-    font-size: 10px;
-    font-weight: 500;
-    color: #12152F;
-    margin-bottom: 4px;
+.custom-radio input:checked + .circle {
+  background:var(--gredientBg);
+  border: none;
 }
 
-.liquorContent p {
-    font-size: 9px;
+.custom-radio input:checked + .circle::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 7px;
+    height: 7px;
+    background: white;
+    border-radius: 50%;
+}
+
+
+/* Dashboard */
+.dashboardWrap {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.dashboardContent {
+    width: calc(100% - 195px);
+    margin-left: 195px;
+    padding: 20px;
+    transition: var(--transition01);
+}
+
+.sideNavClose + .dashboardContent {
+    width: calc(100% - 87px);
+    margin-left: 87px;
+}
+
+
+/* Side Nav */
+.sideNav {
+    flex-basis: 180px;
+    position: fixed;
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.05);
+    background: var(--whiteColor);
+    width: 180px;
+    padding:5px 0px 15px 15px;
+    z-index: 9;
+    top: 20px;
+    left: 15px;
+    border-radius: 12px;
+    transition: var(--transition01);
+}
+
+.sideNavMenu {
+    height: calc(100vh - 95px);
+    overflow-y: auto;
+}
+
+.sideNav li a {
+    padding: 14px 0px 14px 10px;
+    margin-bottom: 10px;
+}
+
+.sideNav li a {
+    display: flex;
+    align-items: center;
+    color: var(--textColor);
+    font-size: 14px;
     font-weight: 300;
-    color: rgba(39, 39, 39, 0.5);
+    transition: var(--transition01);
+    border: 1px solid transparent;
 }
 
-.appSection {
-    margin: 30px 0;
+.sideNav li a .menuIcon {
+    margin-right: 8px;
+    display: inline-block;
 }
 
-.appSection p {
-    font-size: 11px;
-    font-weight: 300;
-    text-align: center;
-    color: rgba(39, 39, 39, 0.5);
-}
-
-.liquorSlider img {
-    height: 45px;
-    width: auto;
-}
-
-.liquorSlider{
-  width :100%;
-  margin : 0 auto 16px;
-  overflow: hidden !important;
-}
-
-.liquorSlider  .slick-list{
-    padding: 0 30px !important;
-}
-
-.liquorSlider .slick-arrow::after, .liquorSlider .slick-arrow::before {
+.sideNav .menuIcon .activeIcon {
     display: none;
 }
 
-.liquorSlider .slick-arrow {
-    content: "";
+.sideNav a.active .menuIcon .activeIcon {
+    display: inline-block;
+}
+
+.sideNav a.active .menuIcon .defaultIcon {
+    display: none;
+}
+
+.sideNav li a.active {
+    background: linear-gradient(180deg, #D425FC 0%, #9733EE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 500;
+    border: 1px solid rgba(39, 39, 39, 0.02);
+}
+
+.sideNav li a:hover {
+    background: linear-gradient(180deg, #D425FC 0%, #9733EE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.sideNav .navLogo {
+    display: none;
+}
+
+.sideNav.sideNavClose {
+    padding: 0;
+    width: 72px;
+}
+
+.sideNav.sideNavClose a span:first-child {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+}
+
+.sideNav.sideNavClose a span:last-child {
+    opacity: 0;
+    width: 0;
+}
+
+.sideNav.sideNavClose .closeBtn {
+    transform: rotate(180deg);
+    text-align: left !important;
     position: absolute;
-    z-index: 11;
+    top: 8px;
+    right: -10px;
 }
 
-.liquorSlider .slick-arrow.slick-prev {
-    left: -7px;
-    background: url("../images/prev-arrow.svg");
-    background-size: 50px;
+.sideNav.sideNavClose .navLogo {
+    display: block;
+}
+
+.sideNav.sideNavClose li a {
+    padding: 10px 0px 10px 0;
+    margin-bottom: 0;
     height: 50px;
-    padding: 0;
-    width: 50px;
 }
 
-.liquorSlider .slick-arrow.slick-next {
-    right: -7px;
-    background: url("../images/next-arrow.svg");
-    background-size: 50px;
-    height: 50px;
-    padding: 0;
-    width: 50px;
+/* Dashboard Data */
+.dashboardData {
+    padding: 24px;
 }
 
-.buzzPopup .modal-header {
-    padding: 0;
+.whiteCard {
+    padding: 24px;
+    border-radius: 20px;
+    background-color: var(--whiteColor);
+    margin-bottom: 24px;
+}
+
+.shadowCard {
+    padding: 18px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px 0px rgba(178, 178, 178, 0.37);
+    margin-bottom: 24px;
+}
+
+.topNav span {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.searchBar input {
+    background: var(--whiteColor);
     border: none;
+    padding: 10px 16px 10px 42px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
 }
 
-.buzzPopup .btn-close {
+span.searchIcon {
+    position: absolute;
+    top: 7px;
+    left: 16px;
+}
+
+.filterDiv {
+    background: var(--whiteColor);
+    border: none;
+    padding: 0 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
+    line-height: 40px;
+    color: var(--iconColor);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.filterDropdown .filterBtn {
+    background: var(--whiteColor);
+    border: none;
+    padding: 0 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
+    line-height: 40px;
+    color: var(--iconColor);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.dashboardImgCard {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dashboardImgCard::after {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.2);
+    content: '';
+}
+
+.dashboardImgCard > img {
+    aspect-ratio: 3/2.9;
+    object-fit: cover;
+}
+
+.imgContent {
+    position: absolute;
+    padding: 15px;
+    bottom: 0;
+    width: 100%;
+}
+
+.imgContent::after {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.imgContent * {
+    position: relative;
+    z-index: 1;
+}
+
+.imgContent h4 {
+    color: var(--whiteColor);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.imgContent p {
+    font-weight: 400;
+    margin-bottom: 6px;
+    color: var(--whiteColor);
+}
+
+.imgCardBtn span {
+    border: 1px solid var(--whiteColor);
+    padding: 5px 10px;
+    font-size: 12px;
+    color: var(--whiteColor);
+    font-weight: 400;
+    border-radius: 32px;
+    margin: 2px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.imgCardIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 4px;
+    z-index: 1;
+}
+
+.imgCardIcon span, .imgCardIcon a {
+    display: inline-flex;
+    background: var(--whiteColor);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+
+.slideCard h5, .titleSm {
+    font-size: 18px;
+    color: var(--titleColor);
+    margin-bottom: 16px;
+}
+
+.slideCard img {
+    border-radius: 12px;
+}
+
+.slideCard p {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--iconColor);
+    padding: 10px 0;
+}
+
+.slideCard .slick-arrow {
+    border: none;
+    background: transparent;
+}
+
+.slideCard .slick-arrow:disabled {
+  cursor: not-allowed;
+}
+
+.slideCard .slick-arrow:disabled svg path {
+  fill: var(--iconColor);
+}
+
+span.counter {
+    font-size: 12px;
+    color: var(--iconColor);
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+
+
+/* Profile Page */
+.uploadCard {
+    box-shadow: 0px 0px 6px 0px rgba(178, 178, 178, 0.37);
+    background: var(--whiteColor);
+    border-radius: 12px;
+    aspect-ratio: 4/3.2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 16px;
+}
+
+.uploadCard input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.uploadIcon p {
+    font-weight: 300;
+    font-size: 12px;
+    margin-top: 10px;
+    color: var(--textColor);
+}
+
+.cardImg {
+    border: 0.5px solid #D9D9D9;
+    border-radius: 8px;
+    padding: 5px;
+    width: 100%;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.singleCard  input[type="radio"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.singleCard input[type="radio"]:checked + .cardImg {
+    border: 0.5px solid #9733EE;
+}
+
+.socialLinksCard .form-control {
+    padding-left: 40px;
+}
+
+.socialLinksCard .formSocialIcon {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+}
+
+.profilePageBtn .btn {
+    min-width: 120px;
+}
+
+/* Beverages Page */
+.liquorList {
+    display: inline-flex;
+    flex-flow: wrap;
+    gap: 6px;
+}
+
+.liquorCard {
+    padding: 8px 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.liquorCard .liquorIcon {
+    display: inline-block;
+    height: 21px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.liquorCard p {
+    color: var(--textColor);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.liquorCard .countBadge {
+    border: 0.3px solid var(--greyColor);
+    padding: 2px 7px 1px;
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 12px;
+    display: inline-block;
+    margin-left: 2px;
+    background-color: var(--whiteColor);
+    color: var(--textColor);
+    line-height: normal;
+}
+
+.liquorCard.activeCard {
+    background-image: var(--gredientBg);
+}
+
+.liquorCard.activeCard img {
+    filter: brightness(0) invert(1);
+}
+
+.liquorCard.activeCard p {
+    color: var(--whiteColor);
+} 
+
+.liquorTab.nav-pills .nav-link {
+    color: var(--textColor);
+    font-size: 12px;
+    font-weight: 400;
+    padding: 9px 20px;
+    border-radius: 10px;
+}
+
+.liquorTab .liquorIcon {
+    display: inline-block;
+    height: 21px;
+    width: auto;
+    margin-bottom: 8px;
+}
+
+.liquorTab.nav-pills .nav-link .countBadge {
+    border: 0.3px solid var(--greyColor);
+    padding: 2px 7px 1px;
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 12px;
+    display: inline-block;
+    margin-left: 2px;
+    background-color: var(--whiteColor);
+    color: var(--textColor);
+    line-height: normal;
+}
+
+.liquorTab.nav-pills .nav-link.active, .liquorTab.nav-pills .show>.nav-link {
+    background-image: var(--gredientBg);
+    color: var(--whiteColor);
+}
+
+.liquorTab.nav-pills .nav-link.active img {
+    filter: brightness(0) invert(1);
+}
+
+
+.tableOuter table thead th {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--whiteColor);
+    padding: 11px 16px;
+    background: var(--gredientBg);
+    white-space: nowrap;
+}
+
+.tableOuter table thead th:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.tableOuter table thead th:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.tableOuter table tbody td {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(39, 39, 39, 0.8);
+    padding: 10px 16px;
+    border-bottom: 1px solid #E9E7FD;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.tableBtnWrap .tableBtn {
+    border: 0.7px solid rgba(240, 240, 240, 1);
+    background: transparent;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    transition: var(--transition01);
+}
+
+.tableBtnWrap .tableBtn  img {
+    width: 12px;
+    height: 12px;
+    max-width: inherit;
+}
+
+.tableBtnWrap .tableBtn:hover {
+    background-color: rgba(39, 39, 39, 0.1);
+}
+
+
+/* Event Page */
+.eventCards .imgContent h4 {
+    font-size: 14px;
+}
+
+.eventCards .imgContent p {
+    font-size: 13px;
+    line-height: normal;
+}
+
+.eventCards .imgCardBtn span {
+    font-size: 9px;
+    background: #fff;
+    color: var(--textColor);
+    margin: 0 0 8px;
+}
+
+.eventCards .dashboardImgCard > img {
+    aspect-ratio: 3/3.2;
+}
+
+.eventCards .uploadCard {
+    aspect-ratio: 3/3.2;
+    border: 1px dashed #a331f1;
+}
+
+.eventTabs.nav-pills .nav-link {
+    background: 0 0;
+    border: 0;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 8px 12px;
+    color: var(--textColor);
+    background-color: #F6F6F6;
+    margin-right: 5px;
+}
+
+.eventTabs.nav-pills .nav-link.active{
+    color: var(--whiteColor);
+    background: var(--gredientBg);
+}
+
+.viewSelectBox select {
+    color: var(--textColor);
+}
+
+
+/* Trade Coin */
+.coinCard {
+    background: var(--whiteColor);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.coinCardIcon {
+    display: flex;
+    width: 62px;
+    height: 62px;
+    align-items: center;
+    justify-content: center;
+    background: var(--whiteColor);
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.coinCard h5 {
+    color: var(--titleColor);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.coinCard .btn {
+    line-height: 28px;
+    font-size: 12px;
+    margin: 16px 0;
+}
+
+.coinCard p {
+    font-size: 12px;
+    color: var(--geryTextColor);
+}
+
+.coinCardGrey.coinCard {
+    background-color: var(--greyBg);
+}
+
+.coinCardGrey.coinCard .btn {
+    background: rgba(192, 192, 192, 0.2);
+    color: #8F8F8F !important;
+}
+
+.progressBar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-flow: wrap;
+    line-height: normal;
+}
+
+.progressBar .progressText {
+    background: linear-gradient(180deg, #D425FC 0%, #9733EE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.progressBlank {
+    border: 0.96px solid #02586426;
+    height: 10px;
+    border-radius: 5px;
+    min-width: 210px;
+    position: relative;
+}
+
+span.progressFill {
+    display: inline-block;
+    background: var(--gredientBg);
+    height: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+}
+
+
+.cardText h5 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--titleColor);
+}
+
+.cardText p {
+    font-size: 12px;
+    color: var(--geryTextColor);
+}
+
+.leftIconCard {
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    padding: 25px 10px;
+}
+
+.leftIconCard span {
+    height: 46px;
+    word-wrap: break-word;
+}
+
+.leftVideo {
+    flex-basis: 35%;
+}
+
+.leftVideo iframe {
+    border-radius: 10px;
+}
+
+.cardText {
+    flex-basis: calc(65% - 20px);
+}
+
+/* Happy Hour */
+.buzzModal  .btn-close {
     border-radius: 50%;
     font-size: 10px;
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     border: 1px solid var(--textColor);
     padding: 0;
-    position: absolute;
-    right: -1px;
-    background-color: #fff;
-    top: -4px;
-    z-index: 999;
 }
 
-.buzzPopup .modal-dialog {
-    padding: 10px;
-}
-
-.liquorDetailImg {
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.liquorDetailContent h6 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px;
+/* Sweet Alert */
+.swal2-cancel {
+    line-height: 40px;
+    padding: 0px 16px;
     font-size: 15px;
     font-weight: 500;
+    border-radius: 10px;
+    position: relative;
+    gap: 5px;
+    border: 1px solid rgba(166, 166, 166, 0.3);
+    transition: var(--transition01);
+    background: transparent !important;
     color: var(--titleColor);
 }
 
-.liquorDetailDescTitle {
-    padding-inline: 12px;
-}
-
-.liquorDetailDescTitle span {
-    margin: 12px 0;
-    font-size: 12px;
+.swal2-confirm {
+    line-height: 40px;
+    padding: 0px 16px;
+    font-size: 15px;
     font-weight: 500;
+    border-radius: 10px;
+    position: relative;
+    gap: 5px;
+    border: none;
+    transition: var(--transition01);
+    background: var(--gredientBg);
+    color: var(--whiteColor) !important;
+}
+
+.swal2-cancel:hover, .swal2-confirm:hover {
+    transform: translateY(-4px);
+}
+
+div:where(.swal2-container) h2:where(.swal2-title) {
+    font-size: 20px;
+    font-weight: 600;
     color: var(--titleColor);
 }
 
-.liquorDetailDesc ul li {
-    font-size: 11px;
+div:where(.swal2-container) div:where(.swal2-html-container) {
+    color: var(--titleColor);
+    font-size: 14px;
+}
+
+.appyTimeAll label {
+    font-size: 12px;
     font-weight: 300;
-    color: rgba(39, 39, 39, 0.6);
+    color: rgba(39, 39, 39, 0.8);
+}
+
+.timeRowWrap h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--blackColor);
+    margin: 24px 0 20px; 
+}
+
+.day-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 12px 20px;
-}
-
-.liquorDetailDesc ul li span {
-    color: #BA7300;
-    font-size: 10px;
-    font-weight: 400;
-}
-
-.stepTitle h3 {
-    background: #EAE2D5;
-    font-size: 12px;
-    color: #000;
-    padding: 13px;
-    border-radius: 10px 10px 0px 0px;
-    font-weight: 500;
+    gap: 30px;
     margin-bottom: 10px;
+    font-family: Arial, sans-serif;
 }
 
-.stepList ol li {
-    font-size: 11px;
+.day-row > div {
+    flex-basis: calc(50% - 15px);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.day-row label {
+    color: rgba(39, 39, 39, 0.8);
     font-weight: 300;
-    color: rgba(39, 39, 39, 0.5);
-    padding: 4px 12px;
+    font-size: 14px;
+}
+.day-row input, .day-row select {
+    padding: 0;
     border: none;
+    color: rgba(39, 39, 39, 0.8);
+    font-weight: 300;
+    font-size: 14px;
 }
 
-.videoBox {
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.videoBox iframe {
-    aspect-ratio: 16/9;
-    border-radius: 10px;
-}
-
-@media (min-width: 768px) {
-    .liquorContent h6 {
-        font-size: 14px;
-    }
-
-    .liquorContent p {
-        font-size: 12px;
-    }
-
-    .appSection p {
-        font-size: 14px;
-    }
-
-    .pageTitle {
-        font-size: 24px;
-    }
-
-    .liquorSlider img {
-        height: 100px;
-    }
-
-    .liquorImg img {
-        height: 100px;
-    }
-}
-
-@media (min-width: 992px) {
-    .liquorSlider img {
-        height: 125px;
-    }
+.hourBorderRight {
+    border-right: 1px solid var(--borderColor);
 }

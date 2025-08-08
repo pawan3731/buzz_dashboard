@@ -11,316 +11,403 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/custom.css" rel="stylesheet">
+  <link href="assets/css/responsive.css" rel="stylesheet">
 </head>
- 
+
 <body>
 
+  <div class="dashboardWrap">
+    <div class="sideNav">
+      <div class="navLogo text-center py-4"><img src="assets/images/logo.png" alt="logo"></div>
+      <div class="closeBtn text-end py-4 pe-3 cursorPointer">
+        <img src="assets/images/uil_arrow.svg" alt="logo" width="24">
+      </div>
+      <div class="sideNavMenu">
+        <ul>
+          <li><a class="active" href="index.html">
+              <span class="menuIcon">
+                <img class="defaultIcon" src="assets/images/dashboard-icon.svg" alt="dasboard-icon">
+                <img class="activeIcon" src="assets/images/dashboard-iconActive.svg" alt="dasboard-icon-active">
+              </span>
+              <span>DashBoard</span>
+            </a></li>
+          <li><a href="profile.html">
+              <span class="menuIcon">
+                <img class="defaultIcon" src="assets/images/profile-icon.svg" alt="dasboard-icon">
+                <img class="activeIcon" src="assets/images/profile-iconActive.svg" alt="dasboard-icon-active">
+              </span>
+              <span>Profile</span>
+            </a></li>
+          <li><a href="event.html">
+              <span class="menuIcon">
+                <img class="defaultIcon" src="assets/images/event-icon.svg" alt="dasboard-icon">
+                <img class="activeIcon" src="assets/images/event-iconActive.svg" alt="dasboard-icon-active">
+              </span>
+              <span>Events</span>
+            </a></li>
+          <li><a href="trade-coins.html">
+              <span class="menuIcon">
+                <img class="defaultIcon" src="assets/images/tradeCoin-icon.svg" alt="dasboard-icon">
+                <img class="activeIcon" src="assets/images/tradeCoin-iconActive.svg" alt="dasboard-icon-active">
+              </span>
+              <span>Trade Coins</span>
+            </a></li>
+          <li><a href="happy-hour.html">
+              <span class="menuIcon">
+                <img class="defaultIcon" src="assets/images/happyHour-icon.svg" alt="dasboard-icon">
+                <img class="activeIcon" src="assets/images/happyHour-iconActive.svg" alt="dasboard-icon-active">
+              </span>
+              <span>Happy Hour</span>
+            </a></li>
+          <li><a href="beverages.html">
+              <span class="menuIcon">
+                <img class="defaultIcon" src="assets/images/beverages-icon.svg" alt="dasboard-icon">
+                <img class="activeIcon" src="assets/images/beverages-iconActive.svg" alt="dasboard-icon-active">
+              </span>
+              <span>Beverages</span>
+            </a></li>
+          <li><a href="#">
+              <span class="menuIcon">
+                <img class="defaultIcon" src="assets/images/explore-icon.svg" alt="dasboard-icon">
+                <img class="activeIcon" src="assets/images/explore-icon.svg" alt="dasboard-icon-active">
+              </span>
+              <span>Explore</span>
+            </a></li>
+          <li><a href="#">
+              <span class="menuIcon ps-1">
+                <img class="defaultIcon" src="assets/images/BuzzApp-icon.svg" alt="dasboard-icon">
+                <img class="activeIcon" src="assets/images/BuzzApp-icon.svg" alt="dasboard-icon-active">
+              </span>
+              <span>BUUZ App</span>
+            </a></li>
+        </ul>
 
-  <nav class="navbar bg-transparent py-4">
-    <div class="container position-relative">
-      <a class="navbar-brand w-100 text-center py-0" href="#"><img src="assets/images/logo.png" alt="logo"></a>
-      <button class="navbar-toggler border-0 p-0 position-absolute" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <img src="assets/images/menu-icon.svg" alt="menu-icon">
-      </button>
-      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div> -->
+        <ul class="pt-5 mt-4">
+          <li><a href="profile.html">
+              <span class="menuIcon">
+                <img class="defaultIcon" src="assets/images/contactUs-icon.svg" alt="dasboard-icon">
+                <img class="activeIcon" src="assets/images/contactUs-icon.svg" alt="dasboard-icon-active">
+              </span>
+              <span>Contact Us/Help</span>
+            </a></li>
+          <li><a href="profile.html">
+              <span class="menuIcon">
+                <img class="defaultIcon" src="assets/images/manageTeam-icon.svg" alt="dasboard-icon">
+                <img class="activeIcon" src="assets/images/manageTeam-icon.svg" alt="dasboard-icon-active">
+              </span>
+              <span>Manage Team</span>
+            </a></li>
+          <li><a href="profile.html">
+              <span class="menuIcon">
+                <img class="defaultIcon" src="assets/images/logout-icon.svg" alt="dasboard-icon">
+                <img class="activeIcon" src="assets/images/logout-icon.svg" alt="dasboard-icon-active">
+              </span>
+              <span>Logout</span>
+            </a></li>
+        </ul>
+      </div>
     </div>
-  </nav>
+    <div class="dashboardContent">
+      <div class="d-flex align-items-center justify-content-end gap-3 mb-4 pt-3 topNav">
+        <span><img src="assets/images/setting-icon.svg" alt="setting-icon"></span>
+        <span><img src="assets/images/notification-icon.svg" alt="notification-icons"></span>
+        <span><img src="assets/images/user-img.jpg" alt="user-img"></span>
+      </div>
 
+      <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+        <div class="d-flex justify-content-between align-items-center gap-3">
+          <h5 class="textMd">Active Events</h5>
+          <button class="primaryBtn btn"> + Add Events</button>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="searchBar position-relative">
+            <span class="searchIcon"><img src="assets/images/search-icon.svg" alt="search-icon"></span>
+            <input type="search" placeholder="Search by location">
+          </div>
+          <div class="filterDropdown">
+            <div class="dropdown">
+              <button class="filterBtn" type="button" id="filterDropdown" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="assets/images/filter-icon.svg" alt="filter-icon">
+                Filter
+              </button>
 
-  <section class="bodySection" data-bs-toggle="modal" data-bs-target="#detailModal">
-    <div class="container">
-      <h1 class="pageTitle text-uppercase text-center">COCKTAIL DIRECTORY</h1>
+              <div class="dropdown-menu p-3" aria-labelledby="filterDropdown" style="min-width: 220px;"
+                data-bs-auto-close="outside">
+                <div class="custom-radio-group">
+                  <label class="custom-radio">
+                    <input type="radio" name="eventFilter" value="soonest">
+                    <span class="circle"></span>
+                    Event Coming Soonest
+                  </label>
+                  <label class="custom-radio">
+                    <input type="radio" name="eventFilter" value="recent">
+                    <span class="circle"></span>
+                    Most Recently Added
+                  </label>
+                  <label class="custom-radio">
+                    <input type="radio" name="eventFilter" value="latest">
+                    <span class="circle"></span>
+                    Event Coming Latest
+                  </label>
+                </div>
+                <hr>
+                <button class="btn primaryBtn w-100">Apply Filter</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row g-4">
-        <div class="col-4 col-md-3 col-lg-2">
-          <div class="liquorCard text-center" data-bs-toggle="modal" data-bs-target="#detailModal">
-            <div class="liquorImg">
-              <img src="assets/images/liquor01.png" alt="liquor-img">
+        <div class="col-xl-3 col-md-6">
+          <div class="dashboardImgCard">
+            <img src="assets/images/dashboardImg01.jpg" alt="event-img">
+            <div class="imgCardIcon">
+              <span><img src="assets/images/location.svg" alt="location"></span>
+              <span><img src="assets/images/chart.svg" alt="location"></span>
             </div>
-            <div class="liquorContent">
-              <h6>Spritz</h6>
-              <p>Cognac, Orange uraqao,...</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4 col-md-3 col-lg-2">
-          <div class="liquorCard text-center">
-            <div class="liquorImg">
-              <img src="assets/images/liquor02.png" alt="liquor-img">
-            </div>
-            <div class="liquorContent">
-              <h6>Bloody Mary</h6>
-              <p>Cognac, Orange uraqao,...</p>
+            <div class="imgContent">
+              <h4>NKY Dance</h4>
+              <p><span>June 13 Sun</span> | <span>5:00 PM</span></p>
+              <div class="imgCardBtn">
+                <span>20% Booked</span> <span>300 Total Tickets</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-4 col-md-3 col-lg-2">
-          <div class="liquorCard text-center">
-            <div class="liquorImg">
-              <img src="assets/images/liquor03.png" alt="liquor-img">
+        <div class="col-xl-3 col-md-6">
+          <div class="dashboardImgCard">
+            <img src="assets/images/dashboardImg02.jpg" alt="event-img">
+            <div class="imgCardIcon">
+              <a href="#"><img src="assets/images/location.svg" alt="location"></a>
+              <a href="#"><img src="assets/images/chart.svg" alt="location"></a>
             </div>
-            <div class="liquorContent">
-              <h6>Oaxaca Old Fashioned</h6>
-              <p>Cognac, Orange uraqao,...</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4 col-md-3 col-lg-2">
-          <div class="liquorCard text-center">
-            <div class="liquorImg">
-              <img src="assets/images/liquor04.png" alt="liquor-img">
-            </div>
-            <div class="liquorContent">
-              <h6>Daiquiri</h6>
-              <p>Cognac, Orange uraqao,...</p>
+            <div class="imgContent">
+              <h4>NKY Dance</h4>
+              <p><span>June 13 Sun</span> | <span>5:00 PM</span></p>
+              <div class="imgCardBtn">
+                <span>20% Booked</span> <span>300 Total Tickets</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-4 col-md-3 col-lg-2">
-          <div class="liquorCard text-center">
-            <div class="liquorImg">
-              <img src="assets/images/liquor05.png" alt="liquor-img">
+        <div class="col-xl-3 col-md-6">
+          <div class="dashboardImgCard">
+            <img src="assets/images/dashboardImg03.jpg" alt="event-img">
+            <div class="imgCardIcon">
+              <a href="#"><img src="assets/images/location.svg" alt="location"></a>
+              <a href="#"><img src="assets/images/chart.svg" alt="location"></a>
             </div>
-            <div class="liquorContent">
-              <h6>Paloma</h6>
-              <p>Cognac, Orange uraqao,...</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4 col-md-3 col-lg-2">
-          <div class="liquorCard text-center">
-            <div class="liquorImg">
-              <img src="assets/images/liquor06.png" alt="liquor-img">
-            </div>
-            <div class="liquorContent">
-              <h6>Pina colada</h6>
-              <p>Cognac, Orange uraqao,...</p>
+            <div class="imgContent">
+              <h4>NKY Dance</h4>
+              <p><span>June 13 Sun</span> | <span>5:00 PM</span></p>
+              <div class="imgCardBtn">
+                <span>20% Booked</span> <span>300 Total Tickets</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-4 col-md-3 col-lg-2">
-          <div class="liquorCard text-center">
-            <div class="liquorImg">
-              <img src="assets/images/liquor07.png" alt="liquor-img">
+        <div class="col-xl-3 col-md-6">
+          <div class="dashboardImgCard">
+            <img src="assets/images/dashboardImg01.jpg" alt="event-img">
+            <div class="imgCardIcon">
+              <a href="#"><img src="assets/images/location.svg" alt="location"></a>
+              <a href="#"><img src="assets/images/chart.svg" alt="location"></a>
             </div>
-            <div class="liquorContent">
-              <h6>Mai Tai</h6>
-              <p>Cognac, Orange uraqao,...</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4 col-md-3 col-lg-2">
-          <div class="liquorCard text-center">
-            <div class="liquorImg">
-              <img src="assets/images/liquor08.png" alt="liquor-img">
-            </div>
-            <div class="liquorContent">
-              <h6>Moscow Mule</h6>
-              <p>Cognac, Orange uraqao,...</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4 col-md-3 col-lg-2">
-          <div class="liquorCard text-center">
-            <div class="liquorImg">
-              <img src="assets/images/liquor09.png" alt="liquor-img">
-            </div>
-            <div class="liquorContent">
-              <h6>Boulevardier</h6>
-              <p>Cognac, Orange uraqao,...</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4 col-md-3 col-lg-2">
-          <div class="liquorCard text-center">
-            <div class="liquorImg">
-              <img src="assets/images/liquor10.png" alt="liquor-img">
-            </div>
-            <div class="liquorContent">
-              <h6>Margarita</h6>
-              <p>Cognac, Orange uraqao,...</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4 col-md-3 col-lg-2">
-          <div class="liquorCard text-center">
-            <div class="liquorImg">
-              <img src="assets/images/liquor11.png" alt="liquor-img">
-            </div>
-            <div class="liquorContent">
-              <h6>Mojito</h6>
-              <p>Cognac, Orange uraqao,...</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4 col-md-3 col-lg-2">
-          <div class="liquorCard text-center">
-            <div class="liquorImg">
-              <img src="assets/images/liquor12.jpg" alt="liquor-img">
-            </div>
-            <div class="liquorContent">
-              <h6>Whiskey Sour</h6>
-              <p>Cognac, Orange uraqao,...</p>
+            <div class="imgContent">
+              <h4>NKY Dance</h4>
+              <p><span>June 13 Sun</span> | <span>5:00 PM</span></p>
+              <div class="imgCardBtn">
+                <span>20% Booked</span> <span>300 Total Tickets</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="appSection">
-    <div class="row">
-      <div class="col-12">
-        <p><span>Brought to you by <a href=""><img src="assets/images/buzz-logo.png" alt="buzz-loog"></a> The Event
-            Discovery App.</span> <br /> Explore 100s of cocktails and events near you. Download now.</p>
-        <div class="appBtn text-center mt-1">
-          <a href="#"><img src="assets/images/appStore.png" alt="app-store"></a>
-          <a href="#"><img src="assets/images/googlePay.png" alt="google-play"></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="liquorSlider">
-      <div class="sliderImg">
-        <img src="assets/images/slider01.png" alt="slider-img">
-      </div>
-      <div class="sliderImg">
-        <img src="assets/images/slider02.png" alt="slider-img">
-      </div>
-      <div class="sliderImg">
-        <img src="assets/images/slider03.png" alt="slider-img">
-      </div>
-      <div class="sliderImg">
-        <img src="assets/images/slider04.png" alt="slider-img">
-      </div>
-      <div class="sliderImg">
-        <img src="assets/images/slider05.png" alt="slider-img">
-      </div>
-      <div class="sliderImg">
-        <img src="assets/images/slider06.png" alt="slider-img">
-      </div>
-      <div class="sliderImg">
-        <img src="assets/images/slider07.png" alt="slider-img">
-      </div>
-      <div class="sliderImg">
-        <img src="assets/images/slider08.png" alt="slider-img">
-      </div>
-      <div class="sliderImg">
-        <img src="assets/images/slider09.png" alt="slider-img">
-      </div>
-      <div class="sliderImg">
-        <img src="assets/images/slider01.png" alt="slider-img">
-      </div>
-      <div class="sliderImg">
-        <img src="assets/images/slider02.png" alt="slider-img">
-      </div>
-      <div class="sliderImg">
-        <img src="assets/images/slider03.png" alt="slider-img">
-      </div>
-      <div class="sliderImg">
-        <img src="assets/images/slider04.png" alt="slider-img">
-      </div>
-      <div class="sliderImg">
-        <img src="assets/images/slider05.png" alt="slider-img">
-      </div>
-    </div>
-  </footer>
-
-
-
-
-  <!-- Modal -->
-  <div class="modal fade buzzPopup" id="detailModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="liquorDetail">
-            <div class="liquorDetailImg">
-              <img src="assets/images/img01.png" alt="liquor-img">
-            </div>
-            <div class="liquorDetailContent">
-              <h6>Spritz <img src="assets/images/share-icon.svg" alt="share-icon"></h6>
-              <div class="liquorDetailDesc ">
-                <div class="liquorDetailDescTitle d-flex align-items-center justify-content-between">
-                  <span>Ingredients</span>
-                  <span>Measurements</span>
+      <div class="row mt-4">
+        <div class="col-lg-9">
+          <div class="whiteCard">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+                  <h5 class="titleSm mb-0">Event Analytics</h5>
+                  <div class="viewSelectBox ms-auto">
+                    <select class="form-select ps-3" aria-label="Default select example">
+                      <option selected>1 Week Views</option>
+                      <option value="1">2 Week Views</option>
+                      <option value="2">3 Week Views</option>
+                      <option value="3">4 Week Views</option>
+                    </select>
+                  </div>
                 </div>
-                <ul>
-                  <li>Prosecco <span>90mL</span></li>
-                  <li>Aperol <span>60mL</span></li>
-                  <li>Soda Water <span>30mL</span></li>
+                <ul class=" nav nav-pills mb-3 eventTabs align-items-center gap-1" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="chartTab01-tab" data-bs-toggle="pill"
+                      data-bs-target="#chartTab01" type="button" role="tab" aria-controls="chartTab01"
+                      aria-selected="true">Views</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="chartTab02-tab" data-bs-toggle="pill" data-bs-target="#chartTab02"
+                      type="button" role="tab" aria-controls="chartTab02" aria-selected="false">Clicks</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="chartTab03-tab" data-bs-toggle="pill" data-bs-target="#chartTab03"
+                      type="button" role="tab" aria-controls="chartTab03" aria-selected="false">Shared Events</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="chartTab04-tab" data-bs-toggle="pill" data-bs-target="#chartTab04"
+                      type="button" role="tab" aria-controls="chartTab04" aria-selected="false">Tickets Click</button>
+                  </li>
                 </ul>
-              </div>
-              <div class="stepList mt-3">
-                <div class="stepTitle">
-                  <h3>Step to Make it:</h3>
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="chartTab01" role="tabpanel"
+                    aria-labelledby="chartTab01-tab">
+                    <img src="assets/images/map01.png" class="w-100"">
                 </div>
-                <ol class="list-group list-group-numbered">
-                  <li class="list-group-item">Add 2 slices of orange to your large wine glass</li>
-                  <li class="list-group-item">Add all the ingredients</li>
-                  <li class="list-group-item">Stir briefly</li>
-                </ol>
+                  <div class=" tab-pane fade" id="chartTab02" role="tabpanel" aria-labelledby="chartTab02-tab">
+                    chartTab02
+                  </div>
+                  <div class="tab-pane fade" id="chartTab03" role="tabpanel" aria-labelledby="chartTab03-tab">
+                    chartTab03
+                  </div>
+                  <div class="tab-pane fade" id="chartTab04" role="tabpanel" aria-labelledby="chartTab04-tab">
+                    chartTab04
+                  </div>
+                </div>
               </div>
-              <div class="videoBox mt-3">
-                <iframe width="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+              <div class="col-lg-6">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+                  <h5 class="titleSm mb-0">Interactions</h5>
+                  <span class="pageTitle">19,760</span>
+                </div>
+                <div class="chart03">
+                  <img src="assets/images/map03.png" alt="map-3">
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div> -->
+        <div class="col-lg-3">
+          <div class="whiteCard">
+            <h5 class="titleSm">Checkpoints</h5>
+            <ul class="checkboxList">
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" checked />
+                  <span class="checkmark"></span>
+                </label>
+                <span>Complete Profile</span>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <span>Add Events</span>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <span>Explore Trade Coins</span>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <span>Watch "How BUUZ Works" Video</span>
+              </li>
+            </ul>
+          </div>
+          <div class="whiteCard slideCard">
+            <h5>How BUZZ Works</h5>
+            <div class="slick-slider">
+              <div class="sliderBox">
+                <div class="leftVideo">
+                  <iframe width="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
+                <p>Bullet edit shadow layout scrolling Vector group bold create create invite shadow ellipse. Align
+                  scale hand pixel align font rotate polygon group strikethrough. Flows boolean asset distribute
+                  selection union.</p>
+              </div>
+              <div class="sliderBox">
+                <div class="leftVideo">
+                  <iframe width="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
+                <p>Bullet edit shadow layout scrolling Vector group bold create create invite shadow ellipse. Align
+                  scale hand pixel align font rotate polygon group strikethrough. Flows boolean asset distribute
+                  selection union.</p>
+              </div>
+            </div>
+            <div class="slider-controls mt-3 d-flex align-items-center justify-content-center">
+              <button class="prev-arrow">
+                <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.25 15.5C8.15164 15.5012 8.05411 15.4818 7.96369 15.4431C7.87328 15.4043 7.79197 15.3471 7.725 15.275L0.975 8.525C0.675 8.225 0.675 7.76 0.975 7.46L7.725 0.725C8.025 0.425 8.49 0.425 8.79 0.725C9.09 1.025 9.09 1.49 8.79 1.79L2.565 8L8.79 14.225C9.09 14.525 9.09 14.99 8.79 15.29C8.64 15.44 8.445 15.515 8.265 15.515L8.25 15.5Z"
+                    fill="#676767" />
+                </svg>
+              </button>
+              <span class="counter"></span>
+              <button class="next-arrow">
+                <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1.75 15.5C1.84836 15.5012 1.94589 15.4818 2.03631 15.4431C2.12672 15.4043 2.20803 15.3471 2.275 15.275L9.025 8.525C9.325 8.225 9.325 7.76 9.025 7.46L2.275 0.725C1.975 0.425 1.51 0.425 1.21 0.725C0.91 1.025 0.91 1.49 1.21 1.79L7.435 8L1.21 14.225C0.91 14.525 0.91 14.99 1.21 15.29C1.36 15.44 1.555 15.515 1.735 15.515L1.75 15.5Z"
+                    fill="#676767" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
+
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    $('.liquorSlider').slick({
-      slidesToShow: 7,
+    $(".closeBtn").on("click", function () {
+      $(this).closest(".sideNav").toggleClass("sideNavClose");
+    });
+
+    $('.coin-slider').slick({
+      slidesToShow: 4.5,
       slidesToScroll: 1,
       arrows: true,
       dots: false,
       infinite: false,
-      loop: true,
+      loop: true
+    });
+
+    $(document).ready(function () {
+      const $slider = $('.slick-slider');
+      const $prev = $('.prev-arrow');
+      const $next = $('.next-arrow');
+      const $counter = $('.counter');
+
+      $slider.on('init reInit afterChange', function (event, slick, currentSlide = 0) {
+        const totalSlides = slick.slideCount;
+        const current = currentSlide + 1;
+
+        // Update counter
+        $counter.text(`${current}/${totalSlides}`);
+
+        // Enable/Disable arrows
+        $prev.prop('disabled', currentSlide === 0);
+        $next.prop('disabled', currentSlide === slick.slideCount - 1);
+      });
+
+      $slider.slick({
+        arrows: true,
+        dots: false,
+        prevArrow: $prev,
+        nextArrow: $next,
+      });
     });
   </script>
 
