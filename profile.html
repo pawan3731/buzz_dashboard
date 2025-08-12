@@ -345,37 +345,56 @@
     <div class="modal-dialog modal-dialog-centered" style="max-width: 750px;">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="pageTitle">Add Hours</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="pageTitle">
+            <span class="cursorPointer" data-bs-dismiss="modal" aria-label="Close"><img
+                src="assets/images/back-icon.svg" alt="back-icon"></span>
+            Hours Of Operation
+          </h5>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
         </div>
         <div class="modal-body">
 
-          <div class="row g-5">
+          <div class="row">
             <div class="col-lg-12">
-              <div class="mx-auto">
-                <h3 class="textMd text-center mb-4">Working Hours</h3>
-                <div class="d-flex justify-content-end align-items-center gap-2 appyTimeAll">
-                  <input type="checkbox" id="copyMonday" />
-                  <label for="copyMonday">Apply Monday's times to all days</label>
-                </div>
+              <div class="d-flex justify-content-start pb-4 pt-2 align-items-center gap-2 appyTimeAll">
+                <input type="checkbox" id="copyMonday" />
+                <label for="copyMonday">Apply Monday's times to all days</label>
+              </div>
 
+              <div class="greyBg p-3 p-md-5">
                 <div class="timeRowWrap">
                   <h3 class="mt-0">Monday</h3>
                   <div class="day-row" data-day="monday">
                     <div>
                       <label>From:</label>
-                      <input type="time" class="from-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                        <span class="fw-bold">:</span>
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                     <div>
                       <label>To:</label>
-                      <input type="time" class="to-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                        <span class="fw-bold">:</span>
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                   </div>
@@ -386,18 +405,34 @@
                   <div class="day-row" data-day="tuesday">
                     <div>
                       <label>From:</label>
-                      <input type="time" class="from-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                        <span class="fw-bold">:</span>
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                     <div>
                       <label>To:</label>
-                      <input type="time" class="to-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                        <span class="fw-bold">:</span>
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                   </div>
@@ -408,18 +443,34 @@
                   <div class="day-row" data-day="wednesday">
                     <div>
                       <label>From:</label>
-                      <input type="time" class="from-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                        <span class="fw-bold">:</span>
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                     <div>
                       <label>To:</label>
-                      <input type="time" class="to-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                        <span class="fw-bold">:</span>
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                   </div>
@@ -430,18 +481,34 @@
                   <div class="day-row" data-day="thursday">
                     <div>
                       <label>From:</label>
-                      <input type="time" class="from-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                        <span class="fw-bold">:</span>
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                     <div>
                       <label>To:</label>
-                      <input type="time" class="to-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                        <span class="fw-bold">:</span>
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                   </div>
@@ -452,18 +519,34 @@
                   <div class="day-row" data-day="friday">
                     <div>
                       <label>From:</label>
-                      <input type="time" class="from-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                        <span class="fw-bold">:</span>
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                     <div>
                       <label>To:</label>
-                      <input type="time" class="to-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                        <span class="fw-bold">:</span>
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                   </div>
@@ -474,18 +557,34 @@
                   <div class="day-row" data-day="saturday">
                     <div>
                       <label>From:</label>
-                      <input type="time" class="from-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                        <span class="fw-bold">:</span>
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                     <div>
                       <label>To:</label>
-                      <input type="time" class="to-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                        <span class="fw-bold">:</span>
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                   </div>
@@ -496,18 +595,34 @@
                   <div class="day-row" data-day="sunday">
                     <div>
                       <label>From:</label>
-                      <input type="time" class="from-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                        <span class="fw-bold">:</span>
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                     <div>
                       <label>To:</label>
-                      <input type="time" class="to-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                        <span class="fw-bold">:</span>
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                   </div>
@@ -531,37 +646,48 @@
     <div class="modal-dialog modal-dialog-centered" style="max-width: 750px;">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="pageTitle">Add Hours</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="pageTitle">
+            <span class="cursorPointer" data-bs-dismiss="modal" aria-label="Close"><img
+                src="assets/images/back-icon.svg" alt="back-icon"></span>
+            Kitchen Hours
+          </h5>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
         </div>
         <div class="modal-body">
 
           <div class="row">
             <div class="col-lg-12">
-              <div class="mx-auto">
-                <h3 class="textMd text-center mb-4">Kitchen Hours</h3>
-                <div class="d-flex justify-content-end align-items-center gap-2 appyTimeAll">
-                  <input type="checkbox" id="copyMonday" />
-                  <label for="copyMonday">Apply same as working Hours</label>
-                </div>
 
+              <div class="d-flex justify-content-start pb-4 pt-2 align-items-center gap-2 appyTimeAll">
+                <input type="checkbox" id="copyMonday" />
+                <label for="copyMonday">Apply Monday's times to all days</label>
+              </div>
+              <div class="greyBg p-3 p-md-5">
                 <div class="timeRowWrap">
                   <h3 class="mt-0">Monday</h3>
                   <div class="day-row" data-day="monday">
                     <div>
                       <label>From:</label>
-                      <input type="time" class="from-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                     <div>
                       <label>To:</label>
-                      <input type="time" class="to-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                   </div>
@@ -572,18 +698,26 @@
                   <div class="day-row" data-day="tuesday">
                     <div>
                       <label>From:</label>
-                      <input type="time" class="from-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                     <div>
                       <label>To:</label>
-                      <input type="time" class="to-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                   </div>
@@ -594,19 +728,26 @@
                   <div class="day-row" data-day="wednesday">
                     <div>
                       <label>From:</label>
-                      <input type="time" class="from-time" />
-                      <select class="from-ampm">
-                        <option selected>AM/PM</option>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
+                        <option selected>PM</option>
                         <option>AM</option>
-                        <option>PM</option>
                       </select>
                     </div>
                     <div>
                       <label>To:</label>
-                      <input type="time" class="to-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                   </div>
@@ -617,18 +758,26 @@
                   <div class="day-row" data-day="thursday">
                     <div>
                       <label>From:</label>
-                      <input type="time" class="from-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                     <div>
                       <label>To:</label>
-                      <input type="time" class="to-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                   </div>
@@ -639,18 +788,26 @@
                   <div class="day-row" data-day="friday">
                     <div>
                       <label>From:</label>
-                      <input type="time" class="from-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                     <div>
                       <label>To:</label>
-                      <input type="time" class="to-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                   </div>
@@ -661,18 +818,26 @@
                   <div class="day-row" data-day="saturday">
                     <div>
                       <label>From:</label>
-                      <input type="time" class="from-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                     <div>
                       <label>To:</label>
-                      <input type="time" class="to-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                   </div>
@@ -683,18 +848,26 @@
                   <div class="day-row" data-day="sunday">
                     <div>
                       <label>From:</label>
-                      <input type="time" class="from-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                     <div>
                       <label>To:</label>
-                      <input type="time" class="to-time" />
-                      <select class="from-ampm">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="position-relative">
+                          <input type="time" class="from-time" />
+                        </span>
+                      </div>
+                      <select class="from-ampm bg-transparent">
                         <option selected>PM</option>
-                        <option>PM</option>
+                        <option>AM</option>
                       </select>
                     </div>
                   </div>
@@ -716,6 +889,60 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("#copyMonday").on("change", function () {
+        if ($(this).is(":checked")) {
+          // Get Monday's times and am/pm values
+          let mondayRow = $('.day-row[data-day="monday"]');
+          let mondayTimes = mondayRow.find("input[type='time']").map(function () {
+            return $(this).val();
+          }).get();
+          let mondaySelects = mondayRow.find("select").map(function () {
+            return $(this).val();
+          }).get();
+
+          // Apply to all other days
+          $(".day-row").each(function () {
+            let day = $(this).data("day");
+            if (day !== "monday") {
+              $(this).find("input[type='time']").each(function (i) {
+                $(this).val(mondayTimes[i]);
+              });
+              $(this).find("select").each(function (i) {
+                $(this).val(mondaySelects[i]);
+              });
+            }
+          });
+        }
+      });
+    });
+  </script>
+  <script>
+
+    document.getElementById("copyMonday").addEventListener("change", function () {
+      const checked = this.checked;
+
+      const mondayRow = document.querySelector('[data-day="monday"]');
+      const mondayFromTime = mondayRow.querySelector(".from-time").value;
+      const mondayFromMeridian = mondayRow.querySelectorAll("select")[0].value;
+
+      const mondayToTime = mondayRow.querySelector(".to-time").value;
+      const mondayToMeridian = mondayRow.querySelectorAll("select")[1].value;
+
+      document.querySelectorAll(".day-row").forEach((row) => {
+        const day = row.getAttribute("data-day");
+        if (day !== "monday" && checked) {
+          row.querySelector(".from-time").value = mondayFromTime;
+          row.querySelectorAll("select")[0].value = mondayFromMeridian;
+
+          row.querySelector(".to-time").value = mondayToTime;
+          row.querySelectorAll("select")[1].value = mondayToMeridian;
+        }
+      });
+    });
+  </script>
 
   <script>
     $(".closeBtn").on("click", function () {
